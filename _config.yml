@@ -6,3 +6,6 @@ title: "Silent Shout Tattoo"
 description: "Silent Shout Tattoo"
 
 footer: false
+
+github:
+  is_project_page: false
