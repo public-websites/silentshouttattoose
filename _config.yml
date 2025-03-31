@@ -4,3 +4,6 @@ plugins:
 
 title: "Silent Shout Tattoo"
 description: "Silent Shout Tattoo"
+
+footer:
+  enabled: false
