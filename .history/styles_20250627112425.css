@@ -692,13 +692,19 @@ iframe {
     .animated-gif {
         width: 150px;
         height: 150px;
-        margin: 1.5rem auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-right: 100px; /* Mindre förskjutning på mobil */
     }
     
     .animated-drawing {
         width: 120px;
         height: 120px;
-        margin: 1.5rem auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: -100px; /* Mindre förskjutning på mobil */
     }
 }
 
