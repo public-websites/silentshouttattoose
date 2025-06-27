@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Soul Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+        }
+
+        .hero-text {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-quote {
+            font-size: clamp(1.2rem, 4vw, 2.2rem);
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 3rem;
+            font-style: italic;
+            color: #333;
+        }
+
+        .studio-name {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            color: #2c2c2c;
+            margin: 2rem 0;
+        }
+
+        .studio-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            text-transform: lowercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .location {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 300;
+        }
+
+        /* Large Typography Sections */
+        .large-text-section {
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .large-text {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            line-height: 0.9;
+            color: #2c2c2c;
+            margin-bottom: 2rem;
+        }
+
+        .large-text.split {
+            display: block;
+        }
+
+        .large-text.split span {
+            display: block;
+            margin-left: clamp(2rem, 10vw, 8rem);
+        }
+
+        .large-text.split span:first-child {
+            margin-left: 0;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 6rem 0;
+            background: #f8f8f8;
+        }
+
+        .story-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .story-highlight {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #333;
+            margin: 2rem 0;
+        }
+
+        /* Booking Section with Artistic Touch */
+        .booking-section {
+            padding: 8rem 0;
+            background: #fff;
+            position: relative;
+        }
+
+        .booking-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #2c2c2c;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 3rem;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-intro h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+
+        .form-intro p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            background: #fff;
+        }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            padding: 8rem 0;
+            background: #2c2c2c;
+            color: #fff;
+            text-align: center;
+        }
+
+        .philosophy-text {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* Client Stories */
+        .stories-section {
+            padding: 8rem 0;
+            background: #f8f8f8;
+        }
+
+        .stories-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #2c2c2c;
+        }
+
+        .story-card {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .story-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-card .client-name {
+            font-size: 1rem;
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 8rem 0;
+            background: #2c2c2c;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            border-bottom-color: #fff;
+        }
+
+        /* Loading Animation */
+        .form-loading {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .spinner {
+            border: 2px solid #f0f0f0;
+            border-top: 2px solid #2c2c2c;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .large-text-section {
+                padding: 4rem 0;
+            }
+            
+            .booking-section, .stories-section {
+                padding: 4rem 0;
+            }
+            
+            .form-container {
+                padding: 2rem 1rem;
+            }
+            
+            iframe {
+                height: 600px;
+            }
+            
+            .story-section {
+                padding: 4rem 0;
+            }
+        }
+
+        /* Artistic Elements */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ddd;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        /* Smooth animations */
+        .large-text, .studio-name {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <p class="hero-quote">Jag känner din energi och överför den till den dyraste duken i världen –</p>
+                <h1 class="studio-name">ink<br>soul</h1>
+                <p class="studio-tagline">tatueringsartist</p>
+                <p class="location">baserad i göteborg</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content fade-in">
+                <p class="story-text">
+                    Jag älskar att arbeta med människor och skapa något från noll som kommer att finnas kvar för alltid på den mänskliga kroppen. 
+                    Jag gör freehand och freestyle-tatueringar – det handlar om frihet och känsla.
+                </p>
+                <p class="story-text">
+                    Alla har sin egen speciella energi som jag läser under våra första 15 minuter när vi träffas: 
+                    hur du ler, hur du pratar, hur du känner dig. Då kommer en bild i mitt huvud där jag redan kan se den framtida designen för ditt projekt.
+                </p>
+                <p class="story-highlight">
+                    Processen för mig är alltid som om vi dansar och känner varandra, och då kommer något unikt för dig och för mig.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="large-text-section">
+        <div class="container">
+            <h2 class="large-text split fade-in">
+                känsligt
+                <span>käns-</span>
+                <span>ligt</span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="philosophy-section">
+        <div class="container">
+            <p class="philosophy-text fade-in">
+                Förtroende för artisten börjar med förtroende för världen. Mitt mål är att inspirera tro på dig själv, 
+                framtiden och livet självt genom tatueringar. Jag vill förmedla ett budskap genom min konst att du är fri och fri alltid och överallt.
+            </p>
+        </div>
+    </section>
+
+    <section class="large-text-section">
+        <div class="container">
+            <h2 class="large-text split fade-in">
+                din
+                <span>värde-</span>
+                <span>fulla</span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <h2 class="booking-title fade-in">låt oss vibba tillsammans</h2>
+            <div class="form-container fade-in">
+                <div class="form-intro">
+                    <h3>skapa din historia</h3>
+                    <p>Berätta för mig om din vision, din energi, din berättelse. Jag kommer att skapa något unikt bara för dig.</p>
+                </div>
+                
+                <div class="form-loading" id="formLoading">
+                    <div class="spinner"></div>
+                    <p>laddar formulär...</p>
+                </div>
+                
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSe5F3VtygnRylmXwHNeTswBMIdDoRpoEf7FgPYu2_uIHeA4zQ/viewform?embedded=true&vc=0&c=0&w=1&flr=0"
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    onload="hideLoading()"
+                    style="display: none;"
+                    id="bookingForm">
+                    Laddar...
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="stories-section">
+        <div class="container">
+            <h2 class="stories-title fade-in">berättelser</h2>
+            
+            <div class="story-card fade-in">
+                <p>
+                    De flesta gånger skapar jag de första tatueringarna för mina kunder. Jag kan säga att det är ett stort förtroende och jag är tacksam och hedrad över att vara deras artist.
+                </p>
+                <p>
+                    Jag älskar när mina sessioner blir något mer än bara en session med dig, jag älskar det när vi skapar band och utbyter energier med varandra.
+                </p>
+            </div>
+
+            <div class="story-card fade-in">
+                <p>
+                    Jag ser alltid i alla mina kunder mod, fruktan, ärlighet, förfining, lätthet och skönhet. 
+                    Det här är vad jag alltid försöker förmedla på deras hud genom deras berättelse, karaktärer, livserfarenhet och inre tillstånd.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="contact-title fade-in">kontakt</h2>
+            <div class="contact-info fade-in">
+                <p><a href="mailto:info@inksoul.se">info@inksoul.se</a></p>
+                <p><a href="tel:031-xxx-xx-xx">031-xxx xx xx</a></p>
+                <p>göteborg, sverige</p>
+                <br>
+                <p>följ uppdateringar på instagram för gästplatser</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form loading
+        function hideLoading() {
+            document.getElementById('formLoading').style.display = 'none';
+            document.getElementById('bookingForm').style.display = 'block';
+        }
+
+        // Fallback for form loading
+        setTimeout(() => {
+            if (document.getElementById('formLoading').style.display !== 'none') {
+                document.getElementById('formLoading').innerHTML = 
+                    '<p>om formuläret inte visas, <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5F3VtygnRylmXwHNeTswBMIdDoRpoEf7FgPYu2_uIHeA4zQ/viewform" target="_blank" style="color: #2c2c2c; text-decoration: underline;">klicka här</a></p>';
+            }
+        }, 10000);
+
+        // Smooth scrolling for any internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

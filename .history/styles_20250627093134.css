@@ -1,0 +1,881 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Social Header */
+.social-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+}
+
+.social-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Placera ikoner och knapp horisontellt */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+    padding-top: 80px;
+}
+
+.hero-text {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-quote {
+    font-size: clamp(1.2rem, 4vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    font-style: italic;
+    color: #333;
+}
+
+.studio-name {
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    color: #2c2c2c;
+    margin: 2rem 0;
+}
+
+.studio-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.location {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem .5rem;
+    background: transparent;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 2px solid #2c2c2c;
+    border-radius: 5px; /* Added border radius */
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #2c2c2c;
+    color: #fff;
+}
+
+/* Header CTA Button */
+.cta-header-button {
+    display: inline-block;
+    margin-left: auto;
+    padding: 0.5rem 1rem; /* Minska vertikal padding för mindre höjd */
+    background: #2c2c2c;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem; /* Justera textstorleken för proportioner */
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+.cta-header-button:hover {
+    background: #444;
+}
+
+/* Large Typography Sections */
+.large-text-section {
+    padding: 8rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.large-text {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 0.9;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.large-text.split {
+    display: block;
+}
+
+.large-text.split span {
+    display: block;
+    margin-left: clamp(2rem, 10vw, 8rem);
+}
+
+.large-text.split span:first-child {
+    margin-left: 0;
+}
+
+/* Story Section */
+.story-section {
+    padding: 6rem 0;
+    background: #f8f8f8;
+}
+
+.story-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.story-highlight {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+    margin: 2rem 0;
+}
+
+/* Booking Section with Artistic Touch */
+.booking-section {
+    padding: 8rem 0;
+    background: #fff;
+    position: relative;
+}
+
+.booking-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2c2c2c;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #f8f8f8;
+    padding: 3rem;
+    border-radius: 0;
+    position: relative;
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-intro h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.form-intro p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    background: #fff;
+}
+
+/* Custom Form Styles */
+.custom-form {
+    max-width: 100%;
+    display: flex; /* Ändra till flex för konsekvent layout */
+    flex-direction: column; /* Vertikal layout */
+    gap: 1.5rem; /* Mellanrum mellan rader */
+    align-items: stretch; /* Sträck ut elementen */
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; /* Vertikal layout för alla skärmar */
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.3rem;
+    text-transform: none;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #495057;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #6c757d;
+}
+
+.checkbox-group a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: auto;
+    padding: 0.75rem 2rem;
+    background: #283618;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: end;
+}
+
+.submit-button:hover {
+    background: #1f2e14;
+}
+
+/* Form intro styling */
+.form-intro {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+.form-intro h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    text-transform: none;
+}
+
+.form-intro p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Profile/Contact Row */
+.profile-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.profile-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 200px;
+    max-width: 260px;
+}
+
+.profile-contact-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-contact-info p {
+    font-size: 1rem;
+    color: #283618;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.opening-hours h4 {
+    margin-bottom: 0.5rem;
+}
+
+.opening-hours p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .profile-contact-row {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .profile-contact-info {
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .custom-form {
+        grid-template-columns: 1fr; /* Ändra till en kolumn för mindre skärmar */
+        gap: 1.5rem;
+    }
+    .form-fields {
+        gap: 1rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    iframe {
+        height: 600px;
+    }
+}
+
+/* Form Toggle */
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.toggle-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #666;
+    border: 2px solid #ddd;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 0px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: #2c2c2c;
+    color: #fff;
+    border-color: #2c2c2c;
+}
+
+.toggle-btn:hover {
+    border-color: #2c2c2c;
+}
+
+/* Google Forms Container */
+.google-form-container {
+    width: 100%;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 8rem 0;
+    background: #2c2c2c;
+    color: #fff;
+    text-align: center;
+}
+
+.philosophy-text {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Client Stories */
+.stories-section {
+    padding: 8rem 0;
+    background: #f8f8f8;
+}
+
+.stories-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2c2c2c;
+}
+
+.story-card {
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.story-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.story-card .client-name {
+    font-size: 1rem;
+    font-style: italic;
+    color: #888;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 8rem 0;
+    background: #2c2c2c;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-info a:hover {
+    border-bottom-color: #fff;
+}
+
+/* Loading Animation */
+.form-loading {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+.spinner {
+    border: 2px solid #f0f0f0;
+    border-top: 2px solid #2c2c2c;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .large-text-section {
+        padding: 4rem 0;
+    }
+    
+    .booking-section, .stories-section {
+        padding: 4rem 0;
+    }
+    
+    .form-container {
+        padding: 2rem 1rem;
+    }
+    
+    iframe {
+        height: 600px;
+    }
+    
+    .story-section {
+        padding: 4rem 0;
+    }
+    
+    .social-header {
+        padding: 0.75rem 0;
+    }
+    
+    .social-icons {
+        gap: 1rem;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 2rem;
+    }
+    
+    .animated-gif {
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        right: 10%;
+    }
+    
+    .animated-drawing {
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: 10%;
+    }
+}
+
+/* Artistic Elements */
+.hero::before,
+.hero::after {
+    content: none; /* Ta bort pseudo-elementen som skapar kvadraten */
+}
+
+/* Animated GIF */
+.animated-gif {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    opacity: 0.3;
+    transform: translateY(-50%);
+}
+
+.animated-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+/* Animated Line Drawing SVG */
+.animated-drawing {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    opacity: 0.2;
+    transform: translateY(-50%);
+}
+
+.animated-drawing svg {
+    width: 100%;
+    height: 100%;
+}
+
+.animated-drawing path {
+    fill: none;
+    stroke: #2c2c2c;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 4s ease-in-out infinite;
+}
+
+.animated-drawing path:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.animated-drawing path:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.animated-drawing path:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes drawLine {
+    0% {
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        stroke-dashoffset: -1000;
+        opacity: 0;
+    }
+}
+
+/* Smooth animations */
+.large-text, .studio-name {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Profile Image Styling */
+.profile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(44, 44, 44, 0.10); /* Move shadow here */
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    /* Remove shadow from here */
+}
+
+/* Footer */
+.social-footer {
+    background: #2c2c2c; /* Mörk bakgrund */
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #444; /* Subtil linje */
+    color: #fff; /* Vit text */
+}
+
+.social-footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-footer .social-icon {
+    width: 24px;
+    height: 24px;
+    color: #fff; /* Vit ikonfärg */
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-footer .social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.studio-logo {
+    display: block;
+    margin: 0 auto 2rem; /* Öka avståndet för bättre linjering */
+    max-width: 350px; /* Återställ till större storlek */
+    height: auto;
+}
+
+.social-footer .studio-logo {
+    max-width: 150px; /* Behåll liten storlek för logotypen i footern */
+    margin: 0 auto 1.5rem; /* Minska avståndet */
+}
+
+button, .cta-button, .cta-header-button, .social-footer .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 1px solid #2c2c2c;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+button:hover, .cta-button:hover, .cta-header-button:hover, .social-footer .cta-button:hover {
+    background: #283618; /* Grön färg vid hover */
+    color: #fff;
+}
