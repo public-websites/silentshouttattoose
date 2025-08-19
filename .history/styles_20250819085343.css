@@ -179,7 +179,7 @@ body {
     text-transform: capitalize;
     letter-spacing: 2px;
     color: #666;
-    margin-bottom: 1.5rem; /* Minska margin för bättre närhet till logotypen */
+    margin-bottom: 2rem;
 }
 
 .location {

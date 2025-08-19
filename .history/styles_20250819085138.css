@@ -179,7 +179,7 @@ body {
     text-transform: capitalize;
     letter-spacing: 2px;
     color: #666;
-    margin-bottom: 1.5rem; /* Minska margin för bättre närhet till logotypen */
+    margin-bottom: 2rem;
 }
 
 .location {
@@ -959,7 +959,7 @@ iframe {
 
 .studio-logo {
     display: block;
-    margin: 0 auto 0.5rem; /* Minska avståndet för att få tagline närmare logotypen */
+    margin: 0 auto 2rem; /* Öka avståndet för bättre linjering */
     max-width: 350px; /* Återställ till större storlek */
     height: auto;
 }

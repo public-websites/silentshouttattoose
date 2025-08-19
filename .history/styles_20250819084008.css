@@ -179,7 +179,7 @@ body {
     text-transform: capitalize;
     letter-spacing: 2px;
     color: #666;
-    margin-bottom: 1.5rem; /* Minska margin för bättre närhet till logotypen */
+    margin-bottom: 2rem;
 }
 
 .location {
@@ -959,22 +959,9 @@ iframe {
 
 .studio-logo {
     display: block;
-    margin: 0 auto 0.5rem; /* Minska avståndet för att få tagline närmare logotypen */
+    margin: 0 auto 2rem; /* Öka avståndet för bättre linjering */
     max-width: 350px; /* Återställ till större storlek */
     height: auto;
-}
-
-/* Hero Welcome Heading */
-.hero-welcome {
-    display: block;
-    margin: 0 auto 2rem;
-    max-width: 350px; /* Samma bredd som studio-logo */
-    text-align: center;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    color: #2c2c2c;
 }
 
 .social-footer .studio-logo {
