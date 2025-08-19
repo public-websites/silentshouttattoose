@@ -1,3 +1,77 @@
+/* ===== JEKYLL OVERRIDES ===== */
+/* Detta förhindrar konflikter mellan Jekyll och Silent Shout styling */
+
+/* Dölj Jekyll header som standard */
+.page-header {
+    display: none !important;
+}
+
+/* Justera main-content för att fungera med Silent Shout design */
+.main-content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+}
+
+/* Förhindra Jekyll styling från att påverka Silent Shout komponenter */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+}
+
+.main-content p {
+    margin-bottom: inherit !important;
+}
+
+.main-content a {
+    color: inherit !important;
+    text-decoration: inherit !important;
+}
+
+.main-content a:hover {
+    color: inherit !important;
+    text-decoration: inherit !important;
+}
+
+/* Säkerställ att Jekyll footer inte konflikterar */
+.site-footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eff0f1;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Skip link styling för tillgänglighet */
+#skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    z-index: 999999;
+    color: #0366d6;
+    background-color: #fff;
+    border: 1px solid #0366d6;
+    border-radius: 3px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: top 0.3s;
+}
+
+#skip-to-content:focus {
+    top: 6px;
+}
+
 /* ===== SILENT SHOUT STYLES ===== */
 
 * {
@@ -114,176 +188,61 @@ body {
     font-weight: 300;
 }
 
-/* CTA Button styling handled by unified button styles below */
-
-/* Specific margin for CTA button in hero section */
 .cta-button {
-    margin-top: 2rem !important;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem .5rem;
+    background: transparent;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 2px solid #2c2c2c;
+    border-radius: 5px; /* Added border radius */
+    transition: all 0.3s ease;
 }
 
-/* Ensure CTA button gets unified styling */
-.hero .cta-button {
-    display: inline-block !important;
-    padding: 0.6rem 1.2rem !important;
-    background: transparent !important;
-    color: #2c2c2c !important;
-    border: 1px solid #2c2c2c !important;
-    font-size: 0.85rem !important;
-    font-weight: 400 !important;
-    text-transform: capitalize !important;
-    letter-spacing: 1px !important;
-    border-radius: 0px !important;
-    transition: all 0.3s ease !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-}
-
-.hero .cta-button:hover {
-    background: #283618 !important;
-    color: #fff !important;
-    border-color: #283618 !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2) !important;
+.cta-button:hover {
+    background: #2c2c2c;
+    color: #fff;
 }
 
 /* CTA Buttons Container */
 .cta-buttons {
     display: flex;
-    gap: 0.5rem; /* Minska gap mellan knapparna */
+    gap: 0.75rem;
     margin-left: auto;
 }
 
 /* Header CTA Button */
 .cta-header-button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem; /* Minska padding ännu mer */
     background: transparent;
     color: #2c2c2c;
     border: 1px solid #2c2c2c;
     font-family: inherit;
-    font-size: 0.85rem;
+    font-size: 0.8rem; /* Minska fontstorlek ytterligare */
     font-weight: 400;
     border-radius: 0px;
     text-transform: capitalize;
     cursor: pointer;
     transition: all 0.3s ease;
-    line-height: 1;
+    line-height: 1; /* Säkerställ att textens radavstånd inte påverkar höjden */
     text-decoration: none;
     white-space: nowrap;
 }
 
 .cta-header-button:hover {
-    background: #283618;
-    color: #fff;
-    border-color: #283618;
+    border-color: #2c2c2c; /* Ändra hover-effekt */
 }
 
 .cta-header-button.active {
-    background: #283618;
+    background: #283618; /* Aktiv bakgrundsfärg */
     color: #fff;
     border-color: #283618;
-}
-
-/* Toggle buttons */
-.toggle-btn {
-    padding: 0.6rem 1.2rem;
-    background: transparent;
-    color: #2c2c2c;
-    border: 1px solid #2c2c2c;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 400;
-    border-radius: 0px;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Submit button */
-.submit-button {
-    width: auto;
-    padding: 0.6rem 1.2rem;
-    background: #283618;
-    color: #fff;
-    border: 1px solid #283618;
-    border-radius: 0px;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    justify-self: end;
-}
-
-.submit-button:hover {
-    background: #1f2e14;
-    border-color: #1f2e14;
-}
-
-/* Unified button styles */
-.cta-button,
-.cta-header-button,
-.toggle-btn,
-.submit-button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    border: 1px solid #2c2c2c;
-    border-radius: 0px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    line-height: 1;
-    white-space: nowrap;
-    box-sizing: border-box;
-}
-
-/* Default state - transparent background */
-.cta-button,
-.cta-header-button,
-.toggle-btn {
-    background: transparent;
-    color: #2c2c2c;
-}
-
-/* Active/filled state */
-.cta-header-button.active,
-.toggle-btn.active,
-.submit-button {
-    background: #283618;
-    color: #fff;
-    border-color: #283618;
-}
-
-/* Hover effects */
-.cta-button:hover,
-.cta-header-button:hover,
-.toggle-btn:hover {
-    background: #283618 !important;
-    color: #fff !important;
-    border-color: #283618 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2);
-}
-
-.submit-button:hover {
-    background: #1f2e14;
-    border-color: #1f2e14;
-}
-
-/* Remove focus outline for cleaner appearance */
-.cta-button:focus,
-.cta-header-button:focus,
-.toggle-btn:focus,
-.submit-button:focus {
-    outline: none;
 }
 
 /* Large Typography Sections */
@@ -492,24 +451,23 @@ iframe {
 
 .submit-button {
     width: auto;
-    padding: 0.6rem 1.2rem;
+    padding: 0.75rem 2rem;
     background: #283618;
     color: #fff;
-    border: 1px solid #283618;
+    border: none;
     border-radius: 0px;
     font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 400;
-    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     justify-self: end;
 }
 
 .submit-button:hover {
     background: #1f2e14;
-    border-color: #1f2e14;
 }
 
 /* Form intro styling */
@@ -635,16 +593,15 @@ iframe {
 }
 
 .toggle-btn {
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.2rem; /* Matcha med header CTA-knapparna */
     background: transparent;
     color: #2c2c2c;
     border: 1px solid #2c2c2c;
     font-family: inherit;
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Matcha fontstorlek */
     font-weight: 400;
     border-radius: 0px;
     text-transform: capitalize;
-    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -656,9 +613,7 @@ iframe {
 }
 
 .toggle-btn:hover {
-    background: #283618;
-    color: #fff;
-    border-color: #283618;
+    border-color: #2c2c2c;
 }
 
 /* Google Forms Container */
@@ -1027,7 +982,25 @@ iframe {
     margin: 0 auto 1.5rem; /* Minska avståndet */
 }
 
-/* Global button reset - removed to prevent conflicts with specific button styles */
+button, .cta-button, .cta-header-button, .social-footer .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 1px solid #2c2c2c;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+button:hover, .cta-button:hover, .cta-header-button:hover, .social-footer .cta-button:hover {
+    background: #283618; /* Grön färg vid hover */
+    color: #fff;
+}
 
 /* Aftercare Content */
 .aftercare-content {
