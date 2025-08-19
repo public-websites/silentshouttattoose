@@ -142,8 +142,8 @@ body {
     background: #283618 !important;
     color: #fff !important;
     border-color: #283618 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2) !important;
 }
 
 /* CTA Buttons Container */

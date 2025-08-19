@@ -142,8 +142,8 @@ body {
     background: #283618 !important;
     color: #fff !important;
     border-color: #283618 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2) !important;
 }
 
 /* CTA Buttons Container */
@@ -230,15 +230,13 @@ body {
     background: #283618 !important;
     color: #fff !important;
     border-color: #283618 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2);
 }
 
 .submit-button:hover {
     background: #1f2e14;
     border-color: #1f2e14;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(31, 46, 20, 0.4);
 }
 
 /* Remove focus outline for cleaner appearance */
@@ -1008,6 +1006,8 @@ iframe {
     transform: translateY(20px);
     transition: all 0.3s ease;
     z-index: 1000;
+    box-shadow: 0 4px 12px rgba(40, 54, 24, 0.3);
+    mix-blend-mode: difference; /* Gör att knappen skiftar mellan grön och vit */
 }
 
 .scroll-to-top.visible {
@@ -1021,18 +1021,7 @@ iframe {
     color: #283618;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
-}
-
-/* Light version for dark backgrounds */
-.scroll-to-top.light {
-    background: #fff;
-    color: #283618;
-}
-
-.scroll-to-top.light:hover {
-    background: #283618;
-    color: #fff;
-    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
+    mix-blend-mode: normal; /* Normal vid hover för konsistent vit bakgrund */
 }
 
 .scroll-to-top svg {
