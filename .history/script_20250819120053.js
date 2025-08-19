@@ -45,21 +45,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Custom form handling
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Here you can send the data to your server or email service
-    console.log('Form data:', data);
-    
-    // For now, show a simple alert
-    alert('Tack för din förfrågan! Jag återkommer så snart som möjligt.');
-    
-    // Reset form
-    this.reset();
+async function sendEmail(data) {
+    const response = await fetch('https://api.sendlayer.com/v1/email/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        body: JSON.stringify({
+            to: 'silentshouttattoo@gmail.com',
+            subject: `Ny förfrågan från ${data.name}`,
+            text: `Namn: ${data.name}\nE-post: ${data.email}\nTelefon: ${data.phone}\nMeddelande: ${data.message}`
+        })
+    });
+
+    if (response.ok) {
+        alert('E-post skickad!');
+    } else {
+        alert('Ett fel uppstod vid skickandet av e-post.');
+    }
+}
+
+document.getElementById('contactForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    await sendEmail(data);
 });
 
 // Form toggle functionality
@@ -89,4 +100,36 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
             }
         }
     });
+});
+
+// Scroll to Top Button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    const heroSection = document.querySelector('.hero');
+    
+    // Show/hide scroll to top button based on scroll position
+    function toggleScrollButton() {
+        if (heroSection) {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > heroBottom) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }
+    }
+    
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Check scroll position on page load and scroll events
+    toggleScrollButton();
+    window.addEventListener('scroll', toggleScrollButton);
 });

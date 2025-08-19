@@ -101,3 +101,32 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
         }
     });
 });
+
+// Scroll to Top Button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    const storySection = document.querySelector('.story-section');
+    
+    // Show/hide scroll to top button based on scroll position
+    function toggleScrollButton() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 200) { // Show button after scrolling 200px from top
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+    
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Check scroll position on page load and scroll events
+    toggleScrollButton();
+    window.addEventListener('scroll', toggleScrollButton);
+});

@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleScrollButton() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > 300) { // Show button after scrolling 300px from top
+        if (scrollTop > 200) { // Show button after scrolling 250px from top
             scrollToTopBtn.classList.add('visible');
         } else {
             scrollToTopBtn.classList.remove('visible');

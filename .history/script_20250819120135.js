@@ -105,16 +105,19 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
 // Scroll to Top Button functionality
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTop');
-    const storySection = document.querySelector('.story-section');
+    const heroSection = document.querySelector('.hero');
     
     // Show/hide scroll to top button based on scroll position
     function toggleScrollButton() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > 300) { // Show button after scrolling 300px from top
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
+        if (heroSection) {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > heroBottom) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
         }
     }
     
