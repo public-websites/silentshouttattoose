@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #2F3A0E;
+    color: #974C09;
     background: #fff;
     overflow-x: hidden;
 }
@@ -104,13 +104,13 @@ body {
     font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 2px;
-    color: #2F3A0E;
+    color: #974C09;
     margin-bottom: 1.5rem; /* Minska margin för bättre närhet till logotypen */
 }
 
 .location {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #BDA581;
     font-weight: 300;
 }
 
@@ -139,9 +139,9 @@ body {
 }
 
 .hero .cta-button:hover {
-    background: #2F3A0E !important;
+    background: #77772F !important;
     color: #fff !important;
-    border-color: #2F3A0E !important;
+    border-color: #77772F !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4) !important;
 }
@@ -173,15 +173,15 @@ body {
 }
 
 .cta-header-button:hover {
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #77772F;
 }
 
 .cta-header-button.active {
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #77772F;
 }
 
 /* Unified button styles */
@@ -218,18 +218,18 @@ body {
 .cta-header-button.active,
 .toggle-btn.active,
 .submit-button {
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #77772F;
 }
 
 /* Hover effects */
 .cta-button:hover,
 .cta-header-button:hover,
 .toggle-btn:hover {
-    background: #2F3A0E !important;
+    background: #77772F !important;
     color: #fff !important;
-    border-color: #2F3A0E !important;
+    border-color: #77772F !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }
@@ -296,7 +296,7 @@ body {
 .story-text {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #2F3A0E;
+    color: #974C09;
     font-weight: 300;
     margin-bottom: 2rem;
 }
@@ -348,7 +348,7 @@ text-transform: uppercase;
 
 .form-intro p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #974C09;
     line-height: 1.6;
     font-weight: 300;
 }
@@ -406,7 +406,7 @@ iframe {
     background: #ffffff; /* Ljus bakgrund för kontrast */
     font-family: inherit;
     font-size: 1rem; /* Justera fontstorlek */
-    color: #2F3A0E;
+    color: #974C09;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
@@ -418,7 +418,7 @@ iframe {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #2F3A0E; /* Matcha textfärg med resten av sidan */
+    color: #974C09; /* Matcha textfärg med skissen */
     font-size: 1rem; /* Justera fontstorlek */
     font-weight: 400; /* Normal vikt */
 }
@@ -441,7 +441,7 @@ iframe {
     margin: 0;
     font-size: 0.85rem;
     line-height: 1.4;
-    color: #2F3A0E;
+    color: #BDA581;
 }
 
 .checkbox-group a {
@@ -456,9 +456,9 @@ iframe {
 .submit-button {
     width: auto;
     padding: 0.6rem 1.2rem;
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
-    border: 1px solid #2F3A0E;
+    border: 1px solid #77772F;
     border-radius: 0px;
     font-family: inherit;
     font-size: 0.85rem;
@@ -491,7 +491,7 @@ iframe {
 
 .form-intro p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #974C09;
     line-height: 1.6;
     font-weight: 400;
 }
@@ -525,7 +525,7 @@ iframe {
 
 .profile-contact-info p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #77772F;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-decoration: underline;
@@ -617,7 +617,6 @@ iframe {
     margin: 0 auto;
     font-weight: 300;
     font-style: italic;
-    color: #2F3A0E;
 }
 
 /* Client Stories */
@@ -645,7 +644,7 @@ iframe {
 .story-card p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #2F3A0E;
+    color: #974C09;
     font-weight: 300;
     margin-bottom: 1.5rem;
 }
@@ -653,7 +652,7 @@ iframe {
 .story-card .client-name {
     font-size: 1rem;
     font-style: italic;
-    color: #2F3A0E;
+    color: #BDA581;
 }
 
 /* Contact Section */
@@ -912,7 +911,7 @@ iframe {
 
 /* Footer */
 .social-footer {
-    background: #2F3A0E; /* Mörkgrön bakgrund */
+    background: #77772F; /* Grön bakgrund som matchar knapparna */
     padding: 2rem 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtil vit linje */
@@ -982,7 +981,7 @@ iframe {
     margin-bottom: 1.5rem; /* Mer luft mellan punkterna */
     line-height: 1.6;
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #974C09;
 }
 
 .aftercare-list li:last-child {
@@ -996,7 +995,7 @@ iframe {
     right: 2rem;
     width: 3rem;
     height: 3rem;
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -1018,8 +1017,8 @@ iframe {
 }
 
 .scroll-to-top:hover {
-    background: #2F3A0E;
-    color: #fff;
+    background: #fff;
+    color: #77772F;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }
@@ -1027,11 +1026,11 @@ iframe {
 /* Light version for dark backgrounds */
 .scroll-to-top.light {
     background: #fff;
-    color: #2F3A0E;
+    color: #77772F;
 }
 
 .scroll-to-top.light:hover {
-    background: #2F3A0E;
+    background: #77772F;
     color: #fff;
     box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }

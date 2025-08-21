@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #2F3A0E;
+    color: #974C09;
     background: #fff;
     overflow-x: hidden;
 }
@@ -30,7 +30,7 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(47, 58, 14, 0.1);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.1);
 }
 
 .social-header .container {
@@ -86,7 +86,7 @@ body {
     line-height: 1.4;
     margin-bottom: 3rem;
     font-style: italic;
-    color: #2F3A0E;
+    color: #333;
 }
 
 .studio-name {
@@ -95,7 +95,7 @@ body {
     text-transform: uppercase;
     letter-spacing: -2px;
     line-height: 0.9;
-    color: #2F3A0E;
+    color: #2c2c2c;
     margin: 2rem 0;
 }
 
@@ -104,13 +104,13 @@ body {
     font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 2px;
-    color: #2F3A0E;
+    color: #666;
     margin-bottom: 1.5rem; /* Minska margin för bättre närhet till logotypen */
 }
 
 .location {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #888;
     font-weight: 300;
 }
 
@@ -126,8 +126,8 @@ body {
     display: inline-block !important;
     padding: 0.6rem 1.2rem !important;
     background: transparent !important;
-    color: #2F3A0E !important;
-    border: 1px solid #2F3A0E !important;
+    color: #2c2c2c !important;
+    border: 1px solid #2c2c2c !important;
     font-size: 0.85rem !important;
     font-weight: 400 !important;
     text-transform: capitalize !important;
@@ -139,11 +139,11 @@ body {
 }
 
 .hero .cta-button:hover {
-    background: #2F3A0E !important;
+    background: #283618 !important;
     color: #fff !important;
-    border-color: #2F3A0E !important;
+    border-color: #283618 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4) !important;
+    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4) !important;
 }
 
 /* CTA Buttons Container */
@@ -158,8 +158,8 @@ body {
     display: inline-block;
     padding: 0.6rem 1.2rem;
     background: transparent;
-    color: #2F3A0E;
-    border: 1px solid #2F3A0E;
+    color: #2c2c2c;
+    border: 1px solid #2c2c2c;
     font-family: inherit;
     font-size: 0.85rem;
     font-weight: 400;
@@ -173,15 +173,15 @@ body {
 }
 
 .cta-header-button:hover {
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #283618;
 }
 
 .cta-header-button.active {
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #283618;
 }
 
 /* Unified button styles */
@@ -196,7 +196,7 @@ body {
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: 1px;
-    border: 1px solid #2F3A0E;
+    border: 1px solid #2c2c2c;
     border-radius: 0px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -211,34 +211,34 @@ body {
 .cta-header-button,
 .toggle-btn {
     background: transparent;
-    color: #2F3A0E;
+    color: #2c2c2c;
 }
 
 /* Active/filled state */
 .cta-header-button.active,
 .toggle-btn.active,
 .submit-button {
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
-    border-color: #2F3A0E;
+    border-color: #283618;
 }
 
 /* Hover effects */
 .cta-button:hover,
 .cta-header-button:hover,
 .toggle-btn:hover {
-    background: #2F3A0E !important;
+    background: #283618 !important;
     color: #fff !important;
-    border-color: #2F3A0E !important;
+    border-color: #283618 !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
 }
 
 .submit-button:hover {
-    background: #974C09;
-    border-color: #974C09;
+    background: #1f2e14;
+    border-color: #1f2e14;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: 0 6px 16px rgba(31, 46, 20, 0.4);
 }
 
 /* Remove focus outline for cleaner appearance */
@@ -262,7 +262,7 @@ body {
     font-weight: 900;
     text-transform: capitalize;
     line-height: 0.9;
-    color: #2F3A0E;
+    color: #2c2c2c;
     margin-bottom: 2rem;
     position: relative;
     z-index: 10;
@@ -296,7 +296,7 @@ body {
 .story-text {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #2F3A0E;
+    color: #555;
     font-weight: 300;
     margin-bottom: 2rem;
 }
@@ -304,7 +304,7 @@ body {
 .story-highlight {
     font-size: 1.1rem;
     font-style: italic;
-    color: #2F3A0E;
+    color: #333;
     margin: 2rem 0;
 }
 
@@ -321,7 +321,7 @@ body {
 text-transform: uppercase;
     text-align: center;
     margin-bottom: 4rem;
-    color: #2F3A0E;
+    color: #2c2c2c;
 }
 
 .form-container {
@@ -341,14 +341,14 @@ text-transform: uppercase;
 .form-intro h3 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #2F3A0E;
+    color: #2c2c2c;
     margin-bottom: 1rem;
     text-transform: capitalize;
 }
 
 .form-intro p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #666;
     line-height: 1.6;
     font-weight: 300;
 }
@@ -401,12 +401,12 @@ iframe {
     width: 100%;
     min-width: 0;
     padding: 1rem; /* Öka padding för bättre placering */
-    border: 1px solid #2F3A0E;
+    border: 1px solid #2c2c2c;
     border-radius: 0px;
     background: #ffffff; /* Ljus bakgrund för kontrast */
     font-family: inherit;
     font-size: 1rem; /* Justera fontstorlek */
-    color: #2F3A0E;
+    color: #495057;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
@@ -418,7 +418,7 @@ iframe {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #2F3A0E; /* Matcha textfärg med resten av sidan */
+    color: #495057; /* Matcha textfärg med skissen */
     font-size: 1rem; /* Justera fontstorlek */
     font-weight: 400; /* Normal vikt */
 }
@@ -441,24 +441,24 @@ iframe {
     margin: 0;
     font-size: 0.85rem;
     line-height: 1.4;
-    color: #2F3A0E;
+    color: #6c757d;
 }
 
 .checkbox-group a {
-    color: #77772F; /* Grön färg */
+    color: #283618; /* Grön färg */
     text-decoration: underline;
 }
 
 .checkbox-group a:hover {
-    color: #974C09; /* Mörkare grön vid hover */
+    color: #1f2e14; /* Mörkare grön vid hover */
 }
 
 .submit-button {
     width: auto;
     padding: 0.6rem 1.2rem;
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
-    border: 1px solid #2F3A0E;
+    border: 1px solid #283618;
     border-radius: 0px;
     font-family: inherit;
     font-size: 0.85rem;
@@ -471,8 +471,8 @@ iframe {
 }
 
 .submit-button:hover {
-    background: #974C09;
-    border-color: #974C09;
+    background: #1f2e14;
+    border-color: #1f2e14;
 }
 
 /* Form intro styling */
@@ -484,14 +484,14 @@ iframe {
 .form-intro h3 {
     font-size: 1.8rem;
     font-weight: 400;
-    color: #2F3A0E;
+    color: #2c2c2c;
     margin-bottom: 1rem;
     text-transform: none;
 }
 
 .form-intro p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #666;
     line-height: 1.6;
     font-weight: 400;
 }
@@ -517,7 +517,7 @@ iframe {
 .profile-contact-info h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #2F3A0E;
+    color: #2c2c2c;
     margin-bottom: 0.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -525,19 +525,19 @@ iframe {
 
 .profile-contact-info p {
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #283618;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-decoration: underline;
 }
 
 .profile-contact-info a {
-    color: #77772F; /* Grön färg */
+    color: #283618; /* Grön färg */
     text-decoration: underline;
 }
 
 .profile-contact-info a:hover {
-    color: #974C09; /* Mörkare grön vid hover */
+    color: #1f2e14; /* Mörkare grön vid hover */
 }
 
 .opening-hours h4 {
@@ -546,7 +546,7 @@ iframe {
 
 .opening-hours p {
     font-size: 1rem;
-    color: #974C09;
+    color: #666;
     margin-bottom: 0.2rem;
     font-weight: 400;
     text-decoration: none;
@@ -605,7 +605,7 @@ iframe {
 /* Philosophy Section */
 .philosophy-section {
     padding: 8rem 0;
-    background: #2F3A0E;
+    background: #2c2c2c;
     color: #fff;
     text-align: center;
 }
@@ -617,7 +617,6 @@ iframe {
     margin: 0 auto;
     font-weight: 300;
     font-style: italic;
-    color: #2F3A0E;
 }
 
 /* Client Stories */
@@ -632,7 +631,7 @@ iframe {
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 4rem;
-    color: #2F3A0E;
+    color: #2c2c2c;
 }
 
 .story-card {
@@ -645,7 +644,7 @@ iframe {
 .story-card p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #2F3A0E;
+    color: #555;
     font-weight: 300;
     margin-bottom: 1.5rem;
 }
@@ -653,13 +652,13 @@ iframe {
 .story-card .client-name {
     font-size: 1rem;
     font-style: italic;
-    color: #2F3A0E;
+    color: #888;
 }
 
 /* Contact Section */
 .contact-section {
     padding: 8rem 0;
-    background: #2F3A0E;
+    background: #2c2c2c;
     color: #fff;
     text-align: center;
 }
@@ -692,13 +691,13 @@ iframe {
 .form-loading {
     text-align: center;
     padding: 3rem;
-    color: #974C09;
+    color: #666;
     font-size: 1rem;
 }
 
 .spinner {
-    border: 2px solid #BDA581;
-    border-top: 2px solid #2F3A0E;
+    border: 2px solid #f0f0f0;
+    border-top: 2px solid #2c2c2c;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -806,7 +805,7 @@ iframe {
 
 .animated-drawing path {
     fill: none;
-    stroke: #2F3A0E;
+    stroke: #2c2c2c;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -886,7 +885,7 @@ iframe {
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    box-shadow: 0 4px 24px rgba(47, 58, 14, 0.10); /* Move shadow here */
+    box-shadow: 0 4px 24px rgba(44, 44, 44, 0.10); /* Move shadow here */
 }
 
 .profile-image {
@@ -904,7 +903,7 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(47, 58, 14, 0.5); /* Grön overlay med transparens */
+    background: rgba(40, 54, 24, 0.5); /* Grön overlay med transparens */
     border-radius: 50%;
     pointer-events: none; /* Gör overlayen klickbar */
     mix-blend-mode: multiply; /* Lägg till multiply filter */
@@ -912,7 +911,7 @@ iframe {
 
 /* Footer */
 .social-footer {
-    background: #2F3A0E; /* Mörkgrön bakgrund */
+    background: #283618; /* Grön bakgrund som matchar knapparna */
     padding: 2rem 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtil vit linje */
@@ -956,7 +955,7 @@ iframe {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: capitalize;
-    color: #2F3A0E;
+    color: #2c2c2c;
 }
 
 .social-footer .studio-logo {
@@ -982,7 +981,7 @@ iframe {
     margin-bottom: 1.5rem; /* Mer luft mellan punkterna */
     line-height: 1.6;
     font-size: 1rem;
-    color: #2F3A0E;
+    color: #555;
 }
 
 .aftercare-list li:last-child {
@@ -996,7 +995,7 @@ iframe {
     right: 2rem;
     width: 3rem;
     height: 3rem;
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -1018,22 +1017,22 @@ iframe {
 }
 
 .scroll-to-top:hover {
-    background: #2F3A0E;
-    color: #fff;
+    background: #fff;
+    color: #283618;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
 }
 
 /* Light version for dark backgrounds */
 .scroll-to-top.light {
     background: #fff;
-    color: #2F3A0E;
+    color: #283618;
 }
 
 .scroll-to-top.light:hover {
-    background: #2F3A0E;
+    background: #283618;
     color: #fff;
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: 0 6px 16px rgba(40, 54, 24, 0.4);
 }
 
 .scroll-to-top svg {
@@ -1074,13 +1073,13 @@ iframe {
     transition: all 0.3s ease;
     opacity: 0.8;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(47, 58, 14, 0.1);
+    box-shadow: 0 4px 12px rgba(44, 44, 44, 0.1);
 }
 
 .certification-badge a:hover .certification-image {
     opacity: 1;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.2);
+    box-shadow: 0 6px 16px rgba(44, 44, 44, 0.2);
 }
 
 @media (max-width: 768px) {

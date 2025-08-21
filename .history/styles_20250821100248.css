@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #2F3A0E;
+    color: #974C09;
     background: #fff;
     overflow-x: hidden;
 }
@@ -406,7 +406,7 @@ iframe {
     background: #ffffff; /* Ljus bakgrund för kontrast */
     font-family: inherit;
     font-size: 1rem; /* Justera fontstorlek */
-    color: #2F3A0E;
+    color: #974C09;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
@@ -418,7 +418,7 @@ iframe {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #2F3A0E; /* Matcha textfärg med resten av sidan */
+    color: #974C09; /* Matcha textfärg med skissen */
     font-size: 1rem; /* Justera fontstorlek */
     font-weight: 400; /* Normal vikt */
 }
@@ -441,7 +441,7 @@ iframe {
     margin: 0;
     font-size: 0.85rem;
     line-height: 1.4;
-    color: #2F3A0E;
+    color: #BDA581;
 }
 
 .checkbox-group a {
@@ -653,7 +653,7 @@ iframe {
 .story-card .client-name {
     font-size: 1rem;
     font-style: italic;
-    color: #2F3A0E;
+    color: #BDA581;
 }
 
 /* Contact Section */
@@ -1018,8 +1018,8 @@ iframe {
 }
 
 .scroll-to-top:hover {
-    background: #2F3A0E;
-    color: #fff;
+    background: #fff;
+    color: #2F3A0E;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }
