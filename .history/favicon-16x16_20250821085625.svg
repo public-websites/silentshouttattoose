@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Green background -->
+  <rect width="16" height="16" fill="#283618"/>
+  
+  <!-- Simplified "SS" monogram in white for 16x16 -->
+  <g fill="#ffffff">
+    <!-- First S -->
+    <path d="M2 2 h6 v2 h-4 v2 h3 v2 h-3 v2 h4 v2 h-6 z"/>
+    <!-- Second S -->
+    <path d="M8 2 h6 v2 h-4 v2 h3 v2 h-3 v2 h4 v2 h-6 z"/>
+  </g>
+</svg>

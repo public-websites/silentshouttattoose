@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#283618"/>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold">
+    <text x="16" y="8" text-anchor="middle" font-size="6" letter-spacing="0.5">SILENT</text>
+    <text x="16" y="14" text-anchor="middle" font-size="6" letter-spacing="0.5">SHOUT</text>
+    <text x="16" y="22" text-anchor="middle" font-size="4" letter-spacing="1">TATTOO</text>
+  </g>
+  <!-- Small decorative element -->
+  <circle cx="16" cy="26" r="1.5" fill="#ffffff"/>
+</svg>

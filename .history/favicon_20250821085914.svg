@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Green background -->
+  <rect width="32" height="32" fill="#283618"/>
+  
+  <!-- "SILENT SHOUT" text stacked vertically -->
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" text-anchor="middle">
+    <text x="16" y="12" font-size="7" letter-spacing="0.5">SILENT</text>
+    <text x="16" y="22" font-size="7" letter-spacing="0.5">SHOUT</text>
+  </g>
+</svg>

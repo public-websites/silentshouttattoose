@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#283618"/>
+  <g transform="translate(4, 4) scale(0.75, 0.75)">
+    <!-- Silent Shout Tattoo Logo in white -->
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <image href="silentshouttattoo-infill-white.svg" width="32" height="32"/>
+    </svg>
+  </g>
+</svg>

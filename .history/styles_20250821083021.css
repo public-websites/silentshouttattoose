@@ -1064,7 +1064,7 @@ iframe {
 .certification-badge {
     text-align: center;
     margin: 3rem auto 0;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .certification-image {
@@ -1084,7 +1084,7 @@ iframe {
 
 @media (max-width: 768px) {
     .certification-badge {
-        max-width: 200px;
+        max-width: 150px;
         margin: 2rem auto 0;
     }
 }
