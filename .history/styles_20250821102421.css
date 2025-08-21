@@ -55,7 +55,6 @@ body {
 .social-icon:hover {
     opacity: 1;
     transform: translateY(-2px);
-    color: #2F3A0E; /* Mörkgrön hover-färg */
 }
 
 .social-icon svg {
@@ -619,10 +618,6 @@ iframe {
     font-weight: 300;
     font-style: italic;
     color: #2F3A0E;
-}
-
-h3.philosophy-text {
-    color: #fff;
 }
 
 /* Client Stories */
