@@ -606,7 +606,7 @@ iframe {
 /* Philosophy Section */
 .philosophy-section {
     padding: 8rem 0;
-    background: #8B592D;
+    background: #dac8ad;
     color: #fff;
     text-align: center;
 }
@@ -628,7 +628,7 @@ h3.philosophy-text {
 /* Client Stories */
 .stories-section {
     padding: 8rem 0;
-    background: #E0D2BC;
+    background: #BDA581;
 }
 
 .stories-title {
@@ -648,11 +648,10 @@ h3.philosophy-text {
 }
 
 .story-card p {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    color: #33312d;
-    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1a1b1a;
+    font-weight: 300;
     margin-bottom: 1.5rem;
 }
 
@@ -660,12 +659,6 @@ h3.philosophy-text {
     font-size: 1rem;
     font-style: italic;
     color: #2F3A0E;
-}
-
-.review-heart {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 1rem 0;
 }
 
 /* Contact Section */
