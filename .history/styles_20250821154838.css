@@ -71,7 +71,7 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, #ffffff 0%, #FFF8EB 100%);
+    background: linear-gradient(135deg, #FFF8EB 0%, #FFF8EB 100%);
     padding-top: 80px;
 }
 
@@ -285,7 +285,7 @@ body {
 /* Story Section */
 .story-section {
     padding: 6rem 0;
-    background: #ffffff;
+    background: #f8f8f8;
 }
 
 .story-content {
