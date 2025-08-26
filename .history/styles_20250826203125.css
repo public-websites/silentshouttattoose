@@ -986,7 +986,6 @@ h3.philosophy-text {
 .social-footer .social-icon:hover {
     opacity: 1;
     transform: translateY(-2px);
-    color: #B9823D; /* Brons hover-färg */
 }
 
 .studio-logo {
@@ -1078,9 +1077,10 @@ h3.philosophy-text {
 }
 
 .scroll-to-top:hover {
-    background: #B9823D;
+    background: #2F3A0E;
     color: #fff;
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }
 
 /* Light version for dark backgrounds */
@@ -1090,8 +1090,9 @@ h3.philosophy-text {
 }
 
 .scroll-to-top.light:hover {
-    background: #B9823D;
+    background: #2F3A0E;
     color: #fff;
+    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
 }
 
 .scroll-to-top svg {
