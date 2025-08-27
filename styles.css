@@ -718,7 +718,7 @@ h3.philosophy-text {
 
 /* Client Stories */
 .stories-section {
-    padding: 8rem 0;
+    padding: 4rem 0 2rem 0; /* Drastiskt minskad top padding från 8rem till 4rem */
     background: #E0D2BC;
 }
 
@@ -727,7 +727,7 @@ h3.philosophy-text {
     font-weight: 900;
     text-transform: capitalize;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem; /* Minskad från 4rem till 2rem */
     color: #2F3A0E;
 }
 
@@ -737,20 +737,28 @@ h3.philosophy-text {
     max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
+    min-height: 180px; /* Slightly reduced min-height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .reviews-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 1000%; /* 10 slides = 1000% */
+    flex-grow: 1;
 }
 
 .story-card {
     width: 10%; /* Each card takes 100%/10 cards = 10% */
     flex-shrink: 0;
     text-align: center;
-    padding: 2rem;
+    padding: 0.5rem 2rem; /* Further reduced top/bottom padding */
     box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center;
 }
 
 .story-card p {
@@ -759,7 +767,7 @@ h3.philosophy-text {
     line-height: 1.2;
     color: #33312D;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin: 0; /* Remove default margins */
 }
 
 .story-card .client-name {
@@ -773,7 +781,8 @@ h3.philosophy-text {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem; /* Reduced margin */
+    flex-shrink: 0; /* Prevent dots from shrinking */
 }
 
 .dot {
@@ -796,7 +805,7 @@ h3.philosophy-text {
 .review-heart {
     text-align: center;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 1rem 0 0 0; /* Reduced bottom margin */
 }
 
 /* Contact Section */
