@@ -420,6 +420,7 @@ text-transform: uppercase;
     font-weight: 300;
     color: #2F3A0E;
     margin-bottom: 1.5rem;
+    text-transform: capitalize;
 }
 
 .form-intro h3 {
