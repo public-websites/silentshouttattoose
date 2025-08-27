@@ -162,9 +162,9 @@ body {
 }
 
 .hero .cta-button:hover {
-    background: #fff !important;
-    color: #2F3A0E !important;
-    border-color: #fff !important;
+    background: #B9823D !important;
+    color: #fff !important;
+    border-color: #B9823D !important;
     transform: translateY(-2px) !important;
 }
 
@@ -269,18 +269,18 @@ body {
 .cta-button:hover,
 .cta-header-button:hover,
 .toggle-btn:hover {
-    background: #2F3A0E !important;
+    background: #B9823D !important;
     color: #fff !important;
-    border-color: #2F3A0E !important;
+    border-color: #B9823D !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: none; /* Ta bort glow-effekten */
 }
 
 .submit-button:hover {
-    background: #974C09;
-    border-color: #974C09;
+    background: #B9823D;
+    border-color: #B9823D;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.4);
+    box-shadow: none; /* Ta bort glow-effekten även från submit-button */
 }
 
 /* Remove focus outline for cleaner appearance */
@@ -293,7 +293,7 @@ body {
 
 /* Large Typography Sections */
 .large-text-section {
-    padding: 8rem 0;
+    padding: 4rem 0 1rem 0; /* Minskat bottom padding drastiskt */
     text-align: center;
     position: relative;
     overflow: hidden; /* Förhindra att element går utanför sektionen */
@@ -387,7 +387,7 @@ body {
 
 /* Booking Section with Artistic Touch */
 .booking-section {
-    padding: 8rem 0;
+    padding: 2rem 0; /* Ännu mindre mellanrum */
     background: #fff;
     position: relative;
 }
@@ -398,6 +398,7 @@ body {
 text-transform: uppercase;
     text-align: center;
     margin-bottom: 4rem;
+    margin-top: 2rem; /* Lägg till mindre top margin */
     color: #2F3A0E;
 }
 
@@ -556,8 +557,8 @@ iframe {
 }
 
 .submit-button:hover {
-    background: #974C09;
-    border-color: #974C09;
+    background: #B9823D;
+    border-color: #B9823D;
 }
 
 /* Form intro styling */
@@ -881,7 +882,7 @@ h3.philosophy-text {
     display: block;
     width: 250px;
     height: 250px;
-    margin: 2rem auto;
+    margin: 0 auto; /* Ingen top/bottom margin alls */
     opacity: 0.3;
 }
 

@@ -1,0 +1,9 @@
+# Editor history files
+.history/
+
+# Node modules (if any)
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
