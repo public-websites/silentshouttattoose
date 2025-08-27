@@ -48,7 +48,7 @@ async function sendEmail(data, formType) {
             phone: data.phone || 'Ingen telefon angiven',
             message: data.message || 'Inget meddelande',
             form_type: formType === 'tattoo' ? 'Tatueringsförfrågan' : 'Konstförfrågan',
-            to_email: 'din-gmail@gmail.com' // Ändra till din Gmail-adress
+            to_email: 'info@silentshouttattoo.com' // Din e-post adress
         };
 
         // Send email using EmailJS

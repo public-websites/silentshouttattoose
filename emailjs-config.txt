@@ -1,0 +1,31 @@
+INSTRUKTIONER FÖR EMAILJS KONFIGURATION:
+
+1. Gå till https://www.emailjs.com/ och skapa konto
+
+2. I script.js, ersätt följande värden:
+   - "YOUR_PUBLIC_KEY" med din EmailJS public key
+   - "YOUR_SERVICE_ID" med din service ID  
+   - "YOUR_TEMPLATE_ID" med din template ID
+
+3. Skapa en email template i EmailJS med följande variabler:
+   - {{from_name}} - Avsändarens namn
+   - {{from_email}} - Avsändarens e-post
+   - {{phone}} - Telefonnummer
+   - {{message}} - Meddelande
+   - {{form_type}} - Typ av förfrågan (tatuering/konst)
+   - {{to_email}} - Din e-post
+
+4. Exempel på email template:
+   Ny {{form_type}} från Silent Shout Tattoo
+
+   Namn: {{from_name}}
+   E-post: {{from_email}}
+   Telefon: {{phone}}
+   
+   Meddelande:
+   {{message}}
+
+5. Kom ihåg att uppdatera "to_email" i script.js till din riktiga e-postadress.
+
+GRATIS PLAN: 200 e-post per månad
+BETALD PLAN: Från $15/månad för fler e-post
