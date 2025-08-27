@@ -5,12 +5,14 @@ Ett professionellt tatueringsstudio i Alingsås med egen webbsida som inkluderar
 ## 🏗️ Projektöversikt
 
 ### Teknisk Stack
+
 - **Frontend:** Vanilla HTML5, CSS3, JavaScript
 - **Hosting:** GitHub Pages
 - **E-post:** EmailJS för formulärhantering
 - **Deployment:** Git-baserat deployment till GitHub Pages
 
 ### Huvudfunktioner
+
 - ✅ Responsiv design
 - ✅ Två anpassade kontaktformulär (tatuering & konst)
 - ✅ EmailJS integration för riktiga e-postmeddelanden
@@ -35,12 +37,14 @@ Ett professionellt tatueringsstudio i Alingsås med egen webbsida som inkluderar
 ## 🚀 Utveckling
 
 ### Lokalt
+
 1. Klona repot
 2. Öppna `index.html` i Live Server (VS Code extension)
 3. Gör ändringar direkt i HTML/CSS/JS filerna
 4. Testa i webbläsare
 
 ### Deploy till Production
+
 ```bash
 # Committa ändringar till dev branch
 git add .
@@ -53,6 +57,7 @@ git push pages dev:main
 ## 📧 EmailJS Konfiguration
 
 ### Aktuella Inställningar
+
 - **Service ID:** `service_fxu5ad2`
 - **Template ID (Tatuering):** `template_qwxplyf`
 - **Template ID (Konst):** `template_gxs76jx`
@@ -60,6 +65,7 @@ git push pages dev:main
 - **Destination:** `silentshouttattoo@gmail.com`
 
 ### Formulärvalidering
+
 - **Obligatoriska fält:** Namn, Telefon, Integritetspolicy
 - **Valfria fält:** E-post, Meddelande
 - **Checkbox färg:** Orange (#B9823D) för konsistens
@@ -67,6 +73,7 @@ git push pages dev:main
 ## 🎨 Design System
 
 ### Färgpalett
+
 ```css
 --primary-dark: #2F3A0E    /* Mörkgrön */
 --primary-light: #77772F   /* Ljusgrön */
@@ -75,10 +82,12 @@ git push pages dev:main
 ```
 
 ### Typografi
+
 - **Huvudfont:** System fonts (fallback till sans-serif)
 - **Accent font:** Reenie Beanie (Google Fonts)
 
 ### Komponenter
+
 - **Formulär:** Två separata templates med toggle-funktionalitet
 - **Navigation:** Smooth scroll till sektioner
 - **Knappar:** Enhetlig styling med hover-effekter
@@ -87,14 +96,17 @@ git push pages dev:main
 ## 🔧 Git Workflow
 
 ### Branches
+
 - **`dev`:** Utvecklingsbranch (primär arbetsgren)
 - **`main`:** Production branch (GitHub Pages källa)
 
 ### Remotes
+
 - **`origin`:** Privat utvecklingsrepo
 - **`pages`:** Public GitHub Pages repo
 
 ### Deployment Command
+
 ```bash
 git push pages dev:main --force
 ```
@@ -102,11 +114,13 @@ git push pages dev:main --force
 ## 📱 Responsiv Design
 
 ### Breakpoints
+
 - **Mobile:** < 768px
-- **Tablet:** 768px - 1024px  
+- **Tablet:** 768px - 1024px
 - **Desktop:** > 1024px
 
 ### Anpassningar
+
 - Navigation kollapsar på mobil
 - Formulär stackas vertikalt
 - Bilder skalas responsivt
@@ -115,15 +129,19 @@ git push pages dev:main --force
 ## 🐛 Vanliga Problem & Lösningar
 
 ### GitHub Pages visar 404
+
 **Problem:** Jekyll försöker bygga sidan
 **Lösning:** `.nojekyll` fil finns för att inaktivera Jekyll
 
 ### EmailJS fungerar inte lokalt
+
 **Problem:** CORS-policy från lokala filer
 **Lösning:** Använd Live Server eller testa på live-sidan
 
 ### Formulär skickar inte e-post
+
 **Kontrollera:**
+
 1. EmailJS quota (200/månad på free plan)
 2. Template IDs stämmer överens
 3. Service är aktiv i EmailJS dashboard
