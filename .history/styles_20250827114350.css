@@ -129,7 +129,6 @@ body {
     font-size: 1rem;
     color: #fff;
     font-weight: 300;
-    margin-bottom: 2rem;
 }
 
 .hero-welcome {
@@ -323,7 +322,7 @@ body {
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
     margin: 3rem 0;
     flex-wrap: wrap;
 }
@@ -332,18 +331,20 @@ body {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 0; /* Helt fyrkantiga bilder */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Ta bort transition och hover-effekter */
+    transition: transform 0.3s ease;
 }
 
-/* Ta bort hover-effekt för gallery-image */
+.gallery-image:hover {
+    transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
     .image-gallery {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
     
     .gallery-image {
@@ -1218,12 +1219,10 @@ h3.philosophy-text {
 .social-footer .contact-info a {
     color: #fff !important;
     text-decoration: none !important;
-    border-bottom: none !important; /* Ta bort eventuell border-bottom */
     transition: text-decoration 0.3s ease;
 }
 
 .social-footer .contact-info a:hover {
     color: #fff !important; /* Behåll vit färg vid hover */
     text-decoration: underline !important; /* Lägg till understreck endast vid hover */
-    border-bottom: none !important; /* Förhindra dubbla understreck */
 }
