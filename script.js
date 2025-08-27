@@ -56,7 +56,7 @@ async function sendEmail(data, formType) {
 
         // Send email using EmailJS
         const response = await emailjs.send(
-            'service_fxu5ad2',    // Din EmailJS service ID
+            'service_fdwjoza',    // Ditt korrekta EmailJS service ID
             templateId,           // Rätt template ID beroende på formulärtyp
             templateParams
         );
