@@ -48,16 +48,13 @@ async function sendEmail(data, formType) {
             phone: data.phone || 'Ingen telefon angiven',
             message: data.message || 'Inget meddelande',
             form_type: formType === 'tattoo' ? 'Tatueringsförfrågan' : 'Konstförfrågan',
-            to_email: 'silentshouttattoo@gmail.com' // Din Gmail-adress
+            to_email: 'din-gmail@gmail.com' // Ändra till din Gmail-adress
         };
-
-        // Välj rätt template baserat på formulärtyp
-        const templateId = formType === 'tattoo' ? 'template_qwxplyf' : 'template_gxs76jx';
 
         // Send email using EmailJS
         const response = await emailjs.send(
-            'service_fxu5ad2',    // Din EmailJS service ID
-            templateId,           // Rätt template ID beroende på formulärtyp
+            'YOUR_SERVICE_ID_HERE',    // Från EmailJS dashboard efter Gmail-integration
+            'YOUR_TEMPLATE_ID_HERE',   // Från din skapade email template
             templateParams
         );
 
