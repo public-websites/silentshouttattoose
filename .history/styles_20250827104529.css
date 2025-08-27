@@ -522,15 +522,6 @@ iframe {
     color: #2F3A0E;
 }
 
-.checkbox-group a {
-    color: #77772F; /* Grön färg */
-    text-decoration: underline;
-}
-
-.checkbox-group a:hover {
-    color: #974C09; /* Mörkare grön vid hover */
-}
-
 .submit-button {
     width: auto;
     padding: 0.6rem 1.2rem;
@@ -609,16 +600,17 @@ iframe {
     text-decoration: none; /* Remove underline from paragraph */
 }
 
+/* Remove or comment out this conflicting rule */
+/*
 .profile-contact-info a {
-    color: #77772F !important; /* Ljusgrön färg för alla länkar */
-    text-decoration: underline !important;
-    transition: color 0.3s ease;
+    color: #77772F;
+    text-decoration: underline;
 }
 
 .profile-contact-info a:hover {
-    color: #B9823D !important; /* Ljusare orange vid hover för alla länkar */
-    text-decoration: underline !important;
+    color: #974C09;
 }
+*/
 
 .opening-hours h4 {
     margin-bottom: 0.5rem;

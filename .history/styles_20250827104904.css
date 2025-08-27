@@ -1211,3 +1211,24 @@ a[href*="kjell_karamell"]:hover,
     color: #B9823D !important;
     text-decoration: none !important;
 }
+
+/* Footer link styling - keep white on hover */
+.social-footer .contact-info a {
+    color: #fff !important;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.social-footer .contact-info a:hover {
+    color: #fff !important; /* Behåll vit färg vid hover */
+    text-decoration: underline !important; /* Lägg till understreck vid hover */
+}
+
+/* Override any conflicting styles for footer links */
+.social-footer a {
+    color: #fff !important;
+}
+
+.social-footer a:hover {
+    color: #fff !important; /* Säkerställ att alla footer-länkar behåller vit färg */
+}
