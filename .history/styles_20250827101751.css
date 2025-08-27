@@ -167,26 +167,6 @@ body {
     transform: translateY(-2px) !important;
 }
 
-/* Hero Section Logo */
-.hero .studio-logo {
-    display: block;
-    margin: 0 auto 2rem;
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-    filter: brightness(0) invert(1); /* Gör logotypen vit */
-}
-
-/* Eller alternativt kan vi använda: */
-.hero .studio-logo {
-    display: block;
-    margin: 0 auto 2rem;
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-    filter: invert(1) brightness(100%); /* Inverterar färgerna för att göra den vit */
-}
-
 /* CTA Buttons Container */
 .cta-buttons {
     display: flex;
@@ -1046,7 +1026,7 @@ h3.philosophy-text {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: capitalize;
-    color: #ffffff;
+    color: #2F3A0E;
 }
 
 .social-footer .studio-logo {
