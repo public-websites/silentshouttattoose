@@ -238,3 +238,27 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Starting auto-slide...');
     startAutoSlide();
 });
+
+// Pricing Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const pricingToggle = document.getElementById('pricingToggle');
+    const pricingContent = document.getElementById('pricingContent');
+    
+    if (pricingToggle && pricingContent) {
+        pricingToggle.addEventListener('click', function() {
+            const isActive = pricingContent.classList.contains('active');
+            
+            if (isActive) {
+                // Close
+                pricingContent.classList.remove('active');
+                pricingToggle.classList.remove('active');
+                pricingToggle.querySelector('span').textContent = 'Se prislista';
+            } else {
+                // Open
+                pricingContent.classList.add('active');
+                pricingToggle.classList.add('active');
+                pricingToggle.querySelector('span').textContent = 'Dölj prislista';
+            }
+        });
+    }
+});
