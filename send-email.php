@@ -20,7 +20,7 @@ $message = $input['message'] ?? 'Inget meddelande';
 $type = $input['type'] ?? 'okänd';
 
 // Your email settings
-$to = 'info@silentshouttattoo.com'; // Ändra till din e-post
+$to = 'silentshouttattoo@gmail.com'; 
 $subject = $type === 'tattoo' ? 'Ny tatueringsförfrågan från Silent Shout Tattoo' : 'Ny konstförfrågan från Silent Shout Tattoo';
 
 // Email body

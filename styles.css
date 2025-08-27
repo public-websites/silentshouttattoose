@@ -731,11 +731,26 @@ h3.philosophy-text {
     color: #2F3A0E;
 }
 
-.story-card {
+/* Reviews Slider */
+.reviews-slider {
+    position: relative;
     max-width: 600px;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 1000%; /* 10 slides = 1000% */
+}
+
+.story-card {
+    width: 10%; /* Each card takes 100%/10 cards = 10% */
+    flex-shrink: 0;
     text-align: center;
     padding: 2rem;
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
 }
 
 .story-card p {
@@ -751,6 +766,31 @@ h3.philosophy-text {
     font-size: 1rem;
     font-style: italic;
     color: #2F3A0E;
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(47, 58, 14, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #2F3A0E;
+}
+
+.dot:hover {
+    background: #B9823D;
 }
 
 .review-heart {

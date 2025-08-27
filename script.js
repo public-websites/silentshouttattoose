@@ -168,3 +168,73 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleScrollButton();
     window.addEventListener('scroll', toggleScrollButton);
 });
+
+// Reviews Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing slider...');
+    
+    const reviewsTrack = document.querySelector('.reviews-track');
+    const dots = document.querySelectorAll('.dot');
+    
+    console.log('Reviews track:', reviewsTrack);
+    console.log('Dots found:', dots.length);
+    
+    if (!reviewsTrack || dots.length === 0) {
+        console.error('Slider elements not found!');
+        return;
+    }
+    
+    let currentSlide = 0;
+    const totalSlides = dots.length;
+    const autoSlideInterval = 5000; // 5 seconds
+    let autoSlideTimer;
+
+    // Function to go to specific slide
+    function goToSlide(slideIndex) {
+        console.log('Going to slide:', slideIndex);
+        currentSlide = slideIndex;
+        const translateX = -(slideIndex * 10); // 10% per slide since each slide is 10% wide (100%/10)
+        console.log('Translate X:', translateX + '%');
+        reviewsTrack.style.transform = `translateX(${translateX}%)`;
+        
+        // Update active dot
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
+    }
+
+    // Function to go to next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }
+
+    // Auto-slide functionality
+    function startAutoSlide() {
+        autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideTimer);
+    }
+
+    // Dot click handlers
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            console.log('Dot clicked:', index);
+            stopAutoSlide();
+            goToSlide(index);
+            startAutoSlide(); // Restart auto-slide after manual interaction
+        });
+    });
+
+    // Pause auto-slide when hovering over the slider
+    const reviewsSlider = document.querySelector('.reviews-slider');
+    if (reviewsSlider) {
+        reviewsSlider.addEventListener('mouseenter', stopAutoSlide);
+        reviewsSlider.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // Start auto-slide
+    console.log('Starting auto-slide...');
+    startAutoSlide();
+});
