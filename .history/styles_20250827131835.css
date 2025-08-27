@@ -676,8 +676,7 @@ iframe {
     display: flex;
     justify-content: center;
     gap: 2rem; /* Öka mellanrum mellan knappar */
-    margin: 4rem 0 3rem 0;
-    scroll-margin-top: 120px; /* Justera för header höjd */
+    margin-bottom: 3rem;
 }
 
 /* Google Forms Container */

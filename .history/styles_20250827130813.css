@@ -122,7 +122,7 @@ body {
     text-transform: capitalize;
     letter-spacing: 2px;
     color: #fff;
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
 .location {
@@ -172,7 +172,7 @@ body {
 .hero .studio-logo {
     display: block;
     margin: 0 auto 0.5rem;
-    max-width: 250px;
+    max-width: 350px;
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1); /* Gör logotypen vit */
@@ -182,7 +182,7 @@ body {
 .hero .studio-logo {
     display: block;
     margin: 0 auto 0.5rem;
-    max-width: 250px;
+    max-width: 350px;
     width: 100%;
     height: auto;
     filter: invert(1) brightness(100%); /* Inverterar färgerna för att göra den vit */
@@ -676,8 +676,7 @@ iframe {
     display: flex;
     justify-content: center;
     gap: 2rem; /* Öka mellanrum mellan knappar */
-    margin: 4rem 0 3rem 0;
-    scroll-margin-top: 120px; /* Justera för header höjd */
+    margin-bottom: 3rem;
 }
 
 /* Google Forms Container */

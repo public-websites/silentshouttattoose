@@ -43,7 +43,8 @@
                 </a>
             </div>
             <div class="cta-buttons">
-                <a href="#boka-tid" class="cta-header-button active">Skicka förfrågan</a>
+                <a href="#boka-tid" class="cta-header-button" onclick="showArtForm()">Förfrågan konstuppdrag</a>
+                <a href="#boka-tid" class="cta-header-button active" onclick="showTattooForm()">Förfrågan tid tatuering</a>
             </div>
         </div>
     </header>
@@ -189,8 +190,11 @@ Med all den erfarenheten som han har samlat på sig under årens gång har han e
                         </div>
                     </div>
 
+                    <!-- Booking anchor for smooth navigation -->
+                    <span id="boka-tid"></span>
+
                     <!-- Form Toggle Buttons -->
-                    <div class="form-toggle" id="boka-tid">
+                    <div class="form-toggle">
                         <button class="toggle-btn active" data-form="tattoo">Tatueringsförfrågan</button>
                         <button class="toggle-btn" data-form="art">Konstförfrågan</button>
                     </div>
