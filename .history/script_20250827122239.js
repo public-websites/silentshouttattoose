@@ -90,35 +90,6 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
     });
 });
 
-// Functions to show specific forms when header buttons are clicked
-function showTattooForm() {
-    // Update toggle buttons
-    document.querySelector('[data-form="tattoo"]').classList.add('active');
-    document.querySelector('[data-form="art"]').classList.remove('active');
-    
-    // Show tattoo form, hide art form
-    document.getElementById('tattooForm').style.display = 'block';
-    document.getElementById('artForm').style.display = 'none';
-    
-    // Update header button states
-    document.querySelectorAll('.cta-header-button').forEach(btn => btn.classList.remove('active'));
-    document.querySelector('[onclick="showTattooForm()"]').classList.add('active');
-}
-
-function showArtForm() {
-    // Update toggle buttons
-    document.querySelector('[data-form="art"]').classList.add('active');
-    document.querySelector('[data-form="tattoo"]').classList.remove('active');
-    
-    // Show art form, hide tattoo form
-    document.getElementById('artForm').style.display = 'block';
-    document.getElementById('tattooForm').style.display = 'none';
-    
-    // Update header button states
-    document.querySelectorAll('.cta-header-button').forEach(btn => btn.classList.remove('active'));
-    document.querySelector('[onclick="showArtForm()"]').classList.add('active');
-}
-
 // Scroll to Top Button functionality
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTop');
