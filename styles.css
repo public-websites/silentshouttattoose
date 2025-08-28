@@ -556,9 +556,51 @@ body.menu-open {
 }
 
 .story-content {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+}
+
+/* Story Quote Header */
+.story-quote-header {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #2F3A0E;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Story Content with Image */
+.story-content-with-image {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin: 3rem 0;
+    text-align: left;
+}
+
+.story-image {
+    flex-shrink: 0;
+}
+
+.kjell-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .story-text {
@@ -566,14 +608,47 @@ body.menu-open {
     line-height: 1.8;
     color: #2F3A0E;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .story-highlight {
     font-size: 1.1rem;
     font-style: italic;
     color: #2F3A0E;
-    margin: 2rem 0;
+    margin: 0;
+}
+
+/* Story Highlight Section - Full Width */
+.story-highlight-section {
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.story-highlight-section .story-highlight {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Mobile responsiveness for story section */
+@media (max-width: 768px) {
+    .story-content-with-image {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .kjell-image {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .story-text-content {
+        align-items: center;
+    }
 }
 
 /* Booking Section with Artistic Touch */
