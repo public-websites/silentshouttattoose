@@ -170,7 +170,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Reviews Slider Functionality
+// Mobile Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const hamburgerButton = document.getElementById('hamburgerButton');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (hamburgerButton && mobileNav) {
+        hamburgerButton.addEventListener('click', function() {
+            hamburgerButton.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking navigation links
+        const mobileNavLinks = document.querySelectorAll('#mobileNav .mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerButton.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+
     console.log('DOM loaded, initializing slider...');
     
     const reviewsTrack = document.querySelector('.reviews-track');

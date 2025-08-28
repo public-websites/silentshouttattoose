@@ -43,21 +43,40 @@
                 </a>
             </div>
             
-            <!-- Navigation Links -->
-            <div class="nav-links">
-                <a href="#pricing-section" class="nav-link">Priser</a>
-                <a href="#konstjobb" class="nav-link">Konstjobb</a>
-            </div>
-            
-            <!-- Location Icon -->
-            <div class="location-icon">
-                <a href="https://maps.app.goo.gl/LrRTuoHepeCgzXdj6" target="_blank" class="location-link" aria-label="Hitta till studion">
-                    📍
-                </a>
-            </div>
-            
             <div class="cta-buttons">
+                <!-- Navigation Links - Desktop -->
+                <div class="nav-links desktop-nav">
+                    <a href="#pricing-section" class="nav-link">Priser</a>
+                    <a href="#konstjobb" class="nav-link">Konstjobb</a>
+                    <a href="#eftervard" class="nav-link">Eftervård</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-toggle">
+                    <button id="hamburgerButton" aria-label="Meny">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+                
+                <!-- Location Icon -->
+                <div class="location-icon">
+                    <a href="https://maps.app.goo.gl/LrRTuoHepeCgzXdj6" target="_blank" class="location-link" aria-label="Hitta till studion">
+                        📍
+                    </a>
+                </div>
+                
                 <a href="#boka-tid" class="cta-header-button active">Skicka förfrågan</a>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-container">
+                    <a href="#pricing-section" class="mobile-nav-link">Priser</a>
+                    <a href="#konstjobb" class="mobile-nav-link">Konstjobb</a>
+                    <a href="#eftervard" class="mobile-nav-link">Eftervård</a>
+                </div>
             </div>
         </div>
     </header>
@@ -80,6 +99,7 @@
         <section class="story-section">
             <div class="container">
                 <div class="story-content fade-in">
+                    <div class="review-heart">🪅</div>
                     <p class="story-text">
                         Tatueringsstudion Silent Shout är något utöver det vanliga. En säker, trygg och avslappnande plats där du som kund alltid står i fokus.
                     </p>
@@ -253,7 +273,7 @@ Med all den erfarenheten som han har samlat på sig under årens gång har han e
         </div>
 
         <!-- Eftervård Section -->
-        <section class="large-text-section">
+        <section class="large-text-section" id="eftervard">
             <div class="container">
                 <h2 class="large-text split fade-in">Eftervård</h2>
                 <div class="aftercare-content fade-in">
@@ -274,11 +294,6 @@ Med all den erfarenheten som han har samlat på sig under årens gång har han e
                         Tänk alltid rent när du skall ta hand om din nya tatuering. Rena kläder, sängkläder och handduk, ny tvål och hudkräm. Undvik parfym på eller i närheten av tatueringen. Om tatueringen skulle bli infekterad sök vård.
                     </p>
                 </div>
-            </div>
-
-            <!-- Additional GIF Elements -->
-            <div class="animated-gif">
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3oyNzAwYWVybXM2d2RmM2xxcXA2eDIxanVuOTFydTJiaXpoYngzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7rZOPP0VYSgWdVHQiv/giphy.gif" alt="Animated line drawing 2" />
             </div>
         </section>
 
