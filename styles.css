@@ -36,12 +36,58 @@ body {
 .social-header .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Placera ikoner och knapp horisontellt */
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .social-icons {
     display: flex;
     gap: 1.5rem;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: #33312D;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #77772F;
+    border-bottom-color: #77772F;
+}
+
+/* Location Icon */
+.location-icon {
+    margin-left: 0;
+    margin-right: 0.75rem;
+}
+
+.location-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.location-link:hover {
+    transform: scale(1.1);
+}
+
+/* CTA Buttons positioning */
+.cta-buttons {
+    margin-left: 0;
 }
 
 .social-icon {
@@ -892,6 +938,23 @@ h3.philosophy-text {
     
     .social-header {
         padding: 0.75rem 0;
+    }
+    
+    .social-header .container {
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    
+    .location-icon {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
     
     .social-icons {
