@@ -483,6 +483,15 @@ body.menu-open {
     overflow: hidden; /* Förhindra att element går utanför sektionen */
 }
 
+/* Add spacing between paragraphs in large text sections */
+.large-text-section .story-content .story-text {
+    margin-bottom: 2.5rem;
+}
+
+.large-text-section .story-content .story-text:last-child {
+    margin-bottom: 0;
+}
+
 .large-text {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 900;
@@ -628,6 +637,11 @@ body.menu-open {
 
 /* Mobile responsiveness for story section */
 @media (max-width: 768px) {
+    .story-quote-header {
+        text-align: center;
+        font-weight: 500;
+    }
+    
     .story-content-with-image {
         flex-direction: column;
         align-items: center;
@@ -847,7 +861,7 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
 }
@@ -1787,8 +1801,9 @@ h3.philosophy-text {
     }
 }
 
-/* Specific styling for kjell_karamell and SRT links only in story section */
+/* Specific styling for kjell_karamell, SRT and Google Maps links only in story section */
 .story-text a[href*="kjell_karamell"],
+.story-text a[href*="maps.app.goo.gl"],
 .story-highlight a[href*="s-r-t.se"] {
     color: inherit !important;
     text-decoration: none !important;
@@ -1796,6 +1811,7 @@ h3.philosophy-text {
 }
 
 .story-text a[href*="kjell_karamell"]:hover,
+.story-text a[href*="maps.app.goo.gl"]:hover,
 .story-highlight a[href*="s-r-t.se"]:hover {
     color: #B9823D !important;
     text-decoration: none !important;
