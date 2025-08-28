@@ -764,7 +764,7 @@ h3.philosophy-text {
 
 .story-card p {
     font-family: 'Reenie Beanie', cursive;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     line-height: 1.2;
     color: #33312D;
     font-weight: 500;
@@ -1076,8 +1076,15 @@ h3.philosophy-text {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.price-item:last-child {
+.price-item:last-child:not(.motivavgift-item) {
     border-bottom: none;
+}
+
+/* Extra spacing for motivavgift */
+.motivavgift-item {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid #e0e0e0 !important;
 }
 
 .price-name {
