@@ -1101,15 +1101,19 @@ h3.philosophy-text {
     
     .mobile-menu-toggle {
         display: flex !important;
+        order: 4; /* Längst till höger */
+    }
+    
+    .location-icon {
+        order: 3; /* Före hamburgermenyn */
+    }
+    
+    .cta-header-button {
+        order: 2; /* Före location icon */
     }
     
     .cta-buttons {
         align-items: center;
-    }
-    
-    .location-icon {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
     }
     
     .cta-header-button {
