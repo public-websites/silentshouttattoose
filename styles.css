@@ -212,12 +212,6 @@ body {
 body.menu-open {
     overflow: hidden;
 }
-    border-bottom-color: #8b592d;
-}
-
-body.menu-open {
-    overflow: hidden;
-}
 
 /* Location Icon */
 .location-icon {
