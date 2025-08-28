@@ -285,3 +285,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Mailto backup function - copy email to clipboard if mailto fails
+function handleEmailClick(event) {
+    const email = 'silentshouttattoo@gmail.com';
+    
+    // Try to open mailto first
+    setTimeout(() => {
+        // If user is still on page after 100ms, mailto probably didn't work
+        // Offer to copy email to clipboard instead
+        if (navigator.clipboard) {
+            if (confirm('E-postprogrammet kunde inte öppnas. Vill du kopiera e-postadressen till urklipp istället?')) {
+                navigator.clipboard.writeText(email).then(() => {
+                    alert('E-postadressen har kopierats till urklipp: ' + email);
+                }).catch(() => {
+                    prompt('Kopiera denna e-postadress:', email);
+                });
+            }
+        } else {
+            // Fallback for older browsers
+            prompt('Kopiera denna e-postadress:', email);
+        }
+    }, 100);
+}
+
+// Add event listeners to all mailto links
+document.addEventListener('DOMContentLoaded', function() {
+    const mailtoLinks = document.querySelectorAll('a[href^="mailto:silentshouttattoo@gmail.com"]');
+    mailtoLinks.forEach(link => {
+        link.addEventListener('click', handleEmailClick);
+    });
+});
