@@ -1941,32 +1941,100 @@ h3.philosophy-text {
     }
 }
 
-/* Certification Badge */
-.certification-badge {
-    text-align: center;
+/* SRT Cards Section */
+.srt-cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin: 3rem auto 0;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.srt-card {
+    background: #ffffff;
+    border: 1px solid rgba(47, 58, 14, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(47, 58, 14, 0.1);
+    flex: 1;
+    min-width: 250px;
     max-width: 300px;
 }
 
-.certification-image {
-    width: 100%;
-    height: auto;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(47, 58, 14, 0.1);
+.srt-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(47, 58, 14, 0.15);
+    border-color: rgba(47, 58, 14, 0.2);
 }
 
-.certification-badge a:hover .certification-image {
+.srt-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.srt-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.srt-card:hover .srt-image {
     opacity: 1;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(47, 58, 14, 0.2);
+}
+
+.srt-card-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.srt-card-content h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2F3A0E;
+    letter-spacing: 0.5px;
+}
+
+.srt-arrow {
+    font-size: 1.5rem;
+    color: #8B592D;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.srt-card:hover .srt-arrow {
+    transform: translateX(4px);
+    color: #B9823D;
 }
 
 @media (max-width: 768px) {
-    .certification-badge {
-        max-width: 200px;
+    .srt-cards-section {
+        flex-direction: column;
+        gap: 1.5rem;
         margin: 2rem auto 0;
+        max-width: 280px;
+    }
+    
+    .srt-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .srt-image {
+        width: 100px;
+        height: 100px;
     }
 }
 
