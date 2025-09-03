@@ -477,19 +477,35 @@ body.menu-open {
 
 /* Large Typography Sections */
 .large-text-section {
-    padding: 4rem 0 1rem 0; /* Minskat bottom padding drastiskt */
+    padding: 1.5rem 0 0.5rem 0; /* Minska ytterligare för mobil */
     text-align: center;
     position: relative;
     overflow: hidden; /* Förhindra att element går utanför sektionen */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Större padding på desktop */
+@media (min-width: 768px) {
+    .large-text-section {
+        padding: 3rem 0 1rem 0; /* Minska från 4rem */
+    }
 }
 
 /* Add spacing between paragraphs in large text sections */
 .large-text-section .story-content .story-text {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem; /* Minska ytterligare från 1.5rem */
 }
 
 .large-text-section .story-content .story-text:last-child {
     margin-bottom: 0;
+}
+
+/* Responsiv spacing för story-text */
+@media (min-width: 768px) {
+    .large-text-section .story-content .story-text {
+        margin-bottom: 1.5rem; /* Minska från 2rem */
+    }
 }
 
 .large-text {
@@ -515,13 +531,25 @@ body.menu-open {
 /* Image Gallery */
 .image-gallery {
     display: flex;
-    justify-content: flex-start;
-    gap: 3rem;
-    margin: 3rem auto;
+    justify-content: center; /* Centrera på mobil */
+    gap: 1.5rem; /* Minska ytterligare från 2rem */
+    margin: 1.5rem auto; /* Minska margin från 2rem */
     flex-wrap: wrap;
     align-items: flex-start;
     max-width: 1200px;
     width: 100%;
+    padding: 0 20px; /* Lägg till padding */
+    box-sizing: border-box;
+}
+
+/* Desktop image gallery spacing */
+@media (min-width: 768px) {
+    .image-gallery {
+        justify-content: center; 
+        gap: 5.5rem; 
+        margin: 2.5rem auto; 
+        padding: 0; 
+    }
 }
 
 .gallery-image {
@@ -530,7 +558,6 @@ body.menu-open {
     object-fit: cover;
     object-position: center;
     border-radius: 0; /* Helt fyrkantiga bilder */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
     /* Ta bort transition och hover-effekter */
 }
@@ -553,14 +580,29 @@ body.menu-open {
 /* CTA Container for gallery */
 .cta-container {
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem; /* Minska ytterligare från 1.5rem */
+    margin-bottom: 1rem; /* Minska ytterligare från 1.5rem */
+}
+
+/* Desktop CTA spacing */
+@media (min-width: 768px) {
+    .cta-container {
+        margin-top: 1.5rem; /* Minska från 2rem */
+        margin-bottom: 1.5rem; /* Minska från 2rem */
+    }
 }
 
 /* Story Section */
 .story-section {
-    padding: 6rem 0;
+    padding: 3rem 0; /* Minska för mobil */
     background: #ffffff;
+}
+
+/* Större padding på desktop */
+@media (min-width: 768px) {
+    .story-section {
+        padding: 6rem 0;
+    }
 }
 
 .story-content {
@@ -568,6 +610,9 @@ body.menu-open {
     margin: 0 auto;
     text-align: center;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Förhindra att innehållet går utanför */
 }
 
 /* Story Quote Header */
@@ -587,14 +632,25 @@ body.menu-open {
 /* Story Content with Image */
 .story-content-with-image {
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem; /* Minska ytterligare från 1.5rem */
     align-items: flex-start;
-    margin: 3rem 0;
+    margin: 1rem 0; /* Minska från 2rem */
     text-align: left;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px; /* Lägg till padding för att säkerställa att innehållet inte går utanför */
+    box-sizing: border-box;
+}
+
+/* Större mellanrum på desktop */
+@media (min-width: 768px) {
+    .story-content-with-image {
+        gap: 2rem; /* Minska från 2.5rem */
+        margin: 2rem 0; /* Minska från 3rem */
+        padding: 0; /* Ta bort padding på desktop */
+    }
 }
 
 .story-image {
@@ -614,13 +670,24 @@ body.menu-open {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.75rem; /* Minska ytterligare från 1rem */
     width: 100%;
 }
 
 /* Welcome intro styling */
 .welcome-intro {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem; /* Minska från 1.5rem */
+}
+
+/* Större gap på desktop */
+@media (min-width: 768px) {
+    .story-text-content {
+        gap: 1.25rem; /* Minska från 1.5rem */
+    }
+    
+    .welcome-intro {
+        margin-bottom: 2rem; /* Minska från 2.5rem */
+    }
 }
 
 /* Story Content with Image - Reverse (image on right) */
@@ -647,6 +714,17 @@ body.menu-open {
     margin-bottom: 0;
     width: 100%;
     max-width: none;
+    word-wrap: break-word; /* Förhindra att text går utanför */
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Mindre fontstorlek på mobil för bättre anpassning */
+@media (max-width: 768px) {
+    .story-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
 }
 
 .story-highlight {
@@ -681,7 +759,9 @@ body.menu-open {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
+        gap: 1rem; /* Minska ytterligare från 1.5rem */
+        margin: 1rem 0; /* Minska margin också */
+        padding: 0 20px; /* Säkerställ padding på mobil */
     }
     
     /* Override reverse layout on mobile - all should be same layout */
@@ -689,7 +769,9 @@ body.menu-open {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
+        gap: 1rem; /* Samma här */
+        margin: 1rem 0;
+        padding: 0 20px;
     }
     
     .story-image {
