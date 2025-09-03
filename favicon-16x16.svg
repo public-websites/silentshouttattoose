@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
   <!-- Green background -->
-  <rect width="16" height="16" fill="#77772F"/>
+  <rect width="16" height="16" fill="#2F3A0E"/>
   
   <!-- Silent Shout logo scaled for 16x16 with more margin -->
   <g transform="translate(2, 2) scale(0.024)" fill="white" stroke="white" stroke-width="4.91339" stroke-linecap="round" stroke-linejoin="round">

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <!-- Green background -->
-  <rect width="32" height="32" fill="#77772F"/>
+  <rect width="32" height="32" fill="#2F3A0E"/>
   
   <!-- Silent Shout logo scaled and positioned for favicon with more margin -->
   <g transform="translate(4, 4) scale(0.048)" fill="white" stroke="white" stroke-width="4.91339" stroke-linecap="round" stroke-linejoin="round">
