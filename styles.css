@@ -483,6 +483,7 @@ body.menu-open {
     overflow: hidden; /* Förhindra att element går utanför sektionen */
     width: 100%;
     box-sizing: border-box;
+    scroll-margin-top: 100px; /* Justera för header höjd vid anchor-länkar */
 }
 
 /* Större padding på desktop */
@@ -1417,6 +1418,7 @@ h3.philosophy-text {
 .pricing-section {
     padding: 6rem 0;
     background: #FFF8EB;
+    scroll-margin-top: 100px; /* Justera för header höjd vid anchor-länkar */
 }
 
 .pricing-title {
@@ -1953,8 +1955,7 @@ h3.philosophy-text {
 
 .srt-card {
     background: #ffffff;
-    border: 1px solid rgba(47, 58, 14, 0.1);
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(47, 58, 14, 0.1);
@@ -1965,8 +1966,8 @@ h3.philosophy-text {
 
 .srt-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(47, 58, 14, 0.15);
-    border-color: rgba(47, 58, 14, 0.2);
+    box-shadow: 0 2px 14px rgba(47, 58, 14, 0.15);
+    border-color: rgba(255, 255, 255, 0.616);
 }
 
 .srt-card-link {
@@ -1978,8 +1979,8 @@ h3.philosophy-text {
 }
 
 .srt-image {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
     margin: 0 auto 1rem;
     display: block;
@@ -1992,10 +1993,10 @@ h3.philosophy-text {
 }
 
 .srt-card-content {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -2033,8 +2034,8 @@ h3.philosophy-text {
     }
     
     .srt-image {
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
     }
 }
 
