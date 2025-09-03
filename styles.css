@@ -515,11 +515,13 @@ body.menu-open {
 /* Image Gallery */
 .image-gallery {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 3rem;
-    margin: 3rem 0;
+    margin: 3rem auto;
     flex-wrap: wrap;
     align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .gallery-image {
@@ -562,9 +564,10 @@ body.menu-open {
 }
 
 .story-content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
 }
 
 /* Story Quote Header */
@@ -584,19 +587,24 @@ body.menu-open {
 /* Story Content with Image */
 .story-content-with-image {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: flex-start;
     margin: 3rem 0;
     text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .story-image {
     flex-shrink: 0;
+    flex-basis: 380px;
 }
 
 .kjell-image {
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     object-fit: cover;
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -607,6 +615,28 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+}
+
+/* Welcome intro styling */
+.welcome-intro {
+    margin-bottom: 2.5rem;
+}
+
+/* Story Content with Image - Reverse (image on right) */
+.story-content-with-image.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-content-with-image.reverse .story-text-content {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+}
+
+.story-content-with-image.reverse .story-text {
+    width: 100%;
+    max-width: none;
 }
 
 .story-text {
@@ -615,6 +645,8 @@ body.menu-open {
     color: #2F3A0E;
     font-weight: 300;
     margin-bottom: 0;
+    width: 100%;
+    max-width: none;
 }
 
 .story-highlight {
@@ -652,13 +684,49 @@ body.menu-open {
         gap: 2rem;
     }
     
+    /* Override reverse layout on mobile - all should be same layout */
+    .story-content-with-image.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .story-image {
+        flex-basis: auto;
+    }
+    
     .kjell-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
     
     .story-text-content {
         align-items: center;
+        flex: 1;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .story-text {
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Ensure reverse layout follows same rules on mobile */
+    .story-content-with-image.reverse .story-text-content {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .story-content-with-image.reverse .story-text {
+        text-align: center;
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -1083,6 +1151,22 @@ h3.philosophy-text {
     text-align: center;
     font-size: 1.5rem;
     margin: 1rem 0 0 0; /* Reduced bottom margin */
+}
+
+/* Story specific styles */
+.story-pride-flag {
+    text-align: left !important;
+    margin: 0 0 1rem 0;
+}
+
+.story-intro-header {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: #2F3A0E;
+    width: 100%;
+    max-width: none;
 }
 
 /* Contact Section */
