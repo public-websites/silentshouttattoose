@@ -516,17 +516,20 @@ body.menu-open {
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 3rem;
     margin: 3rem 0;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .gallery-image {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    object-position: center;
     border-radius: 0; /* Helt fyrkantiga bilder */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
     /* Ta bort transition och hover-effekter */
 }
 
