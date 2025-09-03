@@ -265,23 +265,37 @@ document.addEventListener('DOMContentLoaded', function() {
 // Pricing Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const pricingToggle = document.getElementById('pricingToggle');
+    const pricingToggleBottom = document.getElementById('pricingToggleBottom');
     const pricingContent = document.getElementById('pricingContent');
     
+    function togglePricing() {
+        const isActive = pricingContent.classList.contains('active');
+        
+        if (isActive) {
+            // Close
+            pricingContent.classList.remove('active');
+            pricingToggle.classList.remove('active');
+            pricingToggle.querySelector('span').textContent = 'Se prislista';
+        } else {
+            // Open
+            pricingContent.classList.add('active');
+            pricingToggle.classList.add('active');
+            pricingToggle.querySelector('span').textContent = 'Dölj prislista';
+        }
+    }
+    
+    // Event listener för top-knappen
     if (pricingToggle && pricingContent) {
-        pricingToggle.addEventListener('click', function() {
-            const isActive = pricingContent.classList.contains('active');
-            
-            if (isActive) {
-                // Close
-                pricingContent.classList.remove('active');
-                pricingToggle.classList.remove('active');
-                pricingToggle.querySelector('span').textContent = 'Se prislista';
-            } else {
-                // Open
-                pricingContent.classList.add('active');
-                pricingToggle.classList.add('active');
-                pricingToggle.querySelector('span').textContent = 'Dölj prislista';
-            }
+        pricingToggle.addEventListener('click', togglePricing);
+    }
+    
+    // Event listener för bottom-knappen (collapse)
+    if (pricingToggleBottom && pricingContent) {
+        pricingToggleBottom.addEventListener('click', function() {
+            // Endast stäng när bottom-knappen klickas
+            pricingContent.classList.remove('active');
+            pricingToggle.classList.remove('active');
+            pricingToggle.querySelector('span').textContent = 'Se prislista';
         });
     }
 });
