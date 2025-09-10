@@ -515,7 +515,8 @@ body.menu-open {
     text-transform: capitalize;
     line-height: 0.9;
     color: #2F3A0E;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem; /* Öka från 2rem till 4rem för mer luft nertill */
+    margin-top: 2rem; /* Lägg till top margin för bättre spacing */
     position: relative;
     z-index: 10;
 }
@@ -1769,7 +1770,7 @@ h3.philosophy-text {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(47, 58, 14, 0.5); /* Grön overlay med transparens */
+    background: rgba(47, 58, 14, 0.3); /* Grön overlay med transparens - mer genomskinligt */
     border-radius: 50%;
     pointer-events: none; /* Gör overlayen klickbar */
     mix-blend-mode: multiply; /* Lägg till multiply filter */
