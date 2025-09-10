@@ -586,6 +586,11 @@ body.menu-open {
     margin-bottom: 1rem; /* Minska ytterligare från 1.5rem */
 }
 
+/* Left-aligned CTA Container for konstjobb section */
+.cta-container-left {
+    text-align: left;
+}
+
 /* Desktop CTA spacing */
 @media (min-width: 768px) {
     .cta-container {
