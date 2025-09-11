@@ -48,7 +48,7 @@ async function sendEmail(data, formType) {
             phone: data.phone || 'Ingen telefon angiven',
             message: data.message || 'Inget meddelande',
             form_type: formType === 'tattoo' ? 'Tatueringsförfrågan' : 'Konstförfrågan',
-            to_email: 'silentshouttattoo@gmail.com' // Din Gmail-adress
+            to_email: formType === 'tattoo' ? 'tatuering@silentshouttattoo.se' : 'konst@silentshouttattoo.se' // Specifik e-postadress beroende på formulärtyp
         };
 
         // Välj rätt template baserat på formulärtyp
@@ -302,7 +302,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mailto backup function - copy email to clipboard if mailto fails
 function handleEmailClick(event) {
-    const email = 'silentshouttattoo@gmail.com';
+    // Get the email from the link's href attribute
+    const emailLink = event.currentTarget.getAttribute('href');
+    const email = emailLink.replace('mailto:', '');
     
     // Try to open mailto first
     setTimeout(() => {
@@ -325,7 +327,7 @@ function handleEmailClick(event) {
 
 // Add event listeners to all mailto links
 document.addEventListener('DOMContentLoaded', function() {
-    const mailtoLinks = document.querySelectorAll('a[href^="mailto:silentshouttattoo@gmail.com"]');
+    const mailtoLinks = document.querySelectorAll('a[href^="mailto:"]');
     mailtoLinks.forEach(link => {
         link.addEventListener('click', handleEmailClick);
     });

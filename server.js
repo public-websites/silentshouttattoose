@@ -16,10 +16,13 @@ app.post('/send-email', async (req, res) => {
         }
     });
 
+    // Kontrollera vilken typ av förfrågan det är
+    const isArtRequest = req.body.type === 'art';
+    
     const mailOptions = {
         from: email,
-        to: 'silentshouttattoo@gmail.com', // Mottagarens e-postadress
-        subject: `Ny förfrågan från ${name}`,
+        to: isArtRequest ? 'konst@silentshouttattoo.se' : 'tatuering@silentshouttattoo.se', // Mottagarens e-postadress beroende på typ
+        subject: `Ny ${isArtRequest ? 'konst' : 'tatuerings'}förfrågan från ${name}`,
         text: `Namn: ${name}\nE-post: ${email}\nTelefon: ${phone}\nMeddelande: ${message}`
     };
 
