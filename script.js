@@ -41,19 +41,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Custom form handling
 async function sendEmail(data, formType) {
     try {
+        // Kontrollera formulärtypen explicit
+        const isTattoo = formType === 'tattoo';
+        const isArt = formType === 'art';
+        
         // Prepare email parameters
         const templateParams = {
             from_name: data.name || 'Ingen namn angiven',
             from_email: data.email || 'Ingen e-post angiven',
             phone: data.phone || 'Ingen telefon angiven',
             message: data.message || 'Inget meddelande',
-            form_type: formType === 'tattoo' ? 'Tatueringsförfrågan' : 'Konstförfrågan',
-            to_email: formType === 'tattoo' ? 'tatuering@silentshouttattoo.se' : 'konst@silentshouttattoo.se' // Specifik e-postadress beroende på formulärtyp
+            form_type: isTattoo ? 'Tatueringsförfrågan' : 'Konstförfrågan',
+            to_email: isTattoo ? 'tatuering@silentshouttattoo.se' : 'konst@silentshouttattoo.se' // Specifik e-postadress beroende på formulärtyp
         };
 
         // Välj rätt template baserat på formulärtyp
-        const templateId = formType === 'tattoo' ? 'template_qwxplyf' : 'template_gxs76jx';
+        const templateId = isTattoo ? 'template_qwxplyf' : 'template_gxs76jx'; // Tattoo eller Art
 
+        console.log('Sending email with template:', templateId, 'to:', templateParams.to_email);
+        
         // Send email using EmailJS
         const response = await emailjs.send(
             'service_fdwjoza',    // Ditt korrekta EmailJS service ID
@@ -62,7 +68,7 @@ async function sendEmail(data, formType) {
         );
 
         console.log('Email sent successfully:', response);
-        alert(`Tack för din ${formType === 'tattoo' ? 'tatueringsförfrågan' : 'konstförfrågan'}! Vi kontaktar dig så snart vi kan.`);
+        alert(`Tack för din ${isTattoo ? 'tatueringsförfrågan' : 'konstförfrågan'}! Vi kontaktar dig så snart vi kan.`);
         return true;
         
     } catch (error) {
@@ -85,10 +91,12 @@ document.getElementById('tattooForm').addEventListener('submit', async (event) =
 // Handle art form submission
 document.getElementById('artForm').addEventListener('submit', async (event) => {
     event.preventDefault();
+    console.log('Art form submitted');
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
-    data.type = 'art';
-    await sendEmail(data, 'art');
+    data.type = 'art'; // Sätt typen till 'art'
+    console.log('Sending art form data:', data);
+    await sendEmail(data, 'art'); // Använd 'art' som formType för konstförfrågan
     event.target.reset(); // Clear form after submission
 });
 
