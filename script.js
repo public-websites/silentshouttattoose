@@ -16,7 +16,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Form loading - removed Google Forms functionality
 
 // Smooth scrolling for any internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
